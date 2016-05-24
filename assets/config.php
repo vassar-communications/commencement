@@ -8,7 +8,15 @@ return
 	'dev' => 'new',
 
 	// Fonts
-	'typekitID' => 'xxe4kfj',
+    'typekitID' => 'xxe4kfj',
+
+    // Slideshow
+
+    'layoutHeaderPost' => 'gallery:embed:homepage',
+
+    // Sitname
+
+    'siteNameHeader'=> '<b class="u-Masthead__siteName--line1">Commencement</b><b class="u-Masthead__siteName--line2">Sunday, May 29, 2016</b>',
 	
 	//'useLocalNav' => true,
 		

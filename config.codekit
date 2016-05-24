@@ -20,6 +20,290 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/css\/local-group.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/css\/local-group.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/assets\/images\/0050_14_05_JA_0423.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 74547,
+		"inputAbbreviatedPath": "\/assets\/images\/0050_14_05_JA_0423.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/0050_14_05_JA_0423.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/0050_14_05_JA_0469.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 102582,
+		"inputAbbreviatedPath": "\/assets\/images\/0050_14_05_JA_0469.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/0050_14_05_JA_0469.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/0050_14_05_JA_0472-crop.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 59618,
+		"inputAbbreviatedPath": "\/assets\/images\/0050_14_05_JA_0472-crop.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/0050_14_05_JA_0472-crop.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/0050_14_05_JA_1874-crop.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 36945,
+		"inputAbbreviatedPath": "\/assets\/images\/0050_14_05_JA_1874-crop.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/0050_14_05_JA_1874-crop.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/0050_15_05_JA_2782.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 88369,
+		"inputAbbreviatedPath": "\/assets\/images\/0050_15_05_JA_2782.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/0050_15_05_JA_2782.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/0050_15_05_JA_3055-crop.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 60141,
+		"inputAbbreviatedPath": "\/assets\/images\/0050_15_05_JA_3055-crop.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/0050_15_05_JA_3055-crop.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/0050_15_05_JA_3115.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 22965,
+		"inputAbbreviatedPath": "\/assets\/images\/0050_15_05_JA_3115.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/0050_15_05_JA_3115.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/Commencement-0705-SRA_3280648.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 47591,
+		"inputAbbreviatedPath": "\/assets\/images\/Commencement-0705-SRA_3280648.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/Commencement-0705-SRA_3280648.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/css\/commencement-footer-bg.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 27060,
+		"inputAbbreviatedPath": "\/assets\/images\/css\/commencement-footer-bg.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/css\/commencement-footer-bg.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/css\/commencement-vc-logo-goudy-active.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16274,
+		"inputAbbreviatedPath": "\/assets\/images\/css\/commencement-vc-logo-goudy-active.png",
+		"outputAbbreviatedPath": "\/assets\/images\/css\/commencement-vc-logo-goudy-active.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/css\/commencement-vc-logo-goudy-hover.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5851,
+		"inputAbbreviatedPath": "\/assets\/images\/css\/commencement-vc-logo-goudy-hover.png",
+		"outputAbbreviatedPath": "\/assets\/images\/css\/commencement-vc-logo-goudy-hover.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/css\/commencement-vc-logo-goudy.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16241,
+		"inputAbbreviatedPath": "\/assets\/images\/css\/commencement-vc-logo-goudy.png",
+		"outputAbbreviatedPath": "\/assets\/images\/css\/commencement-vc-logo-goudy.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/css\/commencement-vc-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/assets\/images\/css\/commencement-vc-logo.png",
+		"outputAbbreviatedPath": "\/assets\/images\/css\/commencement-vc-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/sherrilyn-ifill.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 76903,
+		"inputAbbreviatedPath": "\/assets\/images\/sherrilyn-ifill.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/sherrilyn-ifill.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/slideshow\/0050_14_05_JA_0472.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 110836,
+		"inputAbbreviatedPath": "\/assets\/images\/slideshow\/0050_14_05_JA_0472.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/slideshow\/0050_14_05_JA_0472.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/slideshow\/0050_14_05_JA_1874.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 288453,
+		"inputAbbreviatedPath": "\/assets\/images\/slideshow\/0050_14_05_JA_1874.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/slideshow\/0050_14_05_JA_1874.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/slideshow\/0050_14_05_JA_2162.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 93827,
+		"inputAbbreviatedPath": "\/assets\/images\/slideshow\/0050_14_05_JA_2162.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/slideshow\/0050_14_05_JA_2162.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/slideshow\/0050_14_05_JA_2337.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 164077,
+		"inputAbbreviatedPath": "\/assets\/images\/slideshow\/0050_14_05_JA_2337.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/slideshow\/0050_14_05_JA_2337.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/slideshow\/0050_15_05_JA_3055.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 117781,
+		"inputAbbreviatedPath": "\/assets\/images\/slideshow\/0050_15_05_JA_3055.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/slideshow\/0050_15_05_JA_3055.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/slideshow\/0050_15_05_JA_3461.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 153980,
+		"inputAbbreviatedPath": "\/assets\/images\/slideshow\/0050_15_05_JA_3461.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/slideshow\/0050_15_05_JA_3461.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/slideshow\/0050_15_05_JA_5891.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 91404,
+		"inputAbbreviatedPath": "\/assets\/images\/slideshow\/0050_15_05_JA_5891.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/slideshow\/0050_15_05_JA_5891.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/slideshow\/Commencement-crowd-10-TS-9.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 293389,
+		"inputAbbreviatedPath": "\/assets\/images\/slideshow\/Commencement-crowd-10-TS-9.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/slideshow\/Commencement-crowd-10-TS-9.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/slideshow\/Commencement-Grads-09-TS-102.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 159474,
+		"inputAbbreviatedPath": "\/assets\/images\/slideshow\/Commencement-Grads-09-TS-102.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/slideshow\/Commencement-Grads-09-TS-102.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/slideshow\/VC-Commencement-1505-JA_3545.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 131159,
+		"inputAbbreviatedPath": "\/assets\/images\/slideshow\/VC-Commencement-1505-JA_3545.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/slideshow\/VC-Commencement-1505-JA_3545.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/VC-Commencement-1505-JA_3545-crop.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 63454,
+		"inputAbbreviatedPath": "\/assets\/images\/VC-Commencement-1505-JA_3545-crop.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/VC-Commencement-1505-JA_3545-crop.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/nav.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -28,6 +312,37 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/assets\/plugins\/Galleria\/config.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/plugins\/Galleria\/config.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/plugins\/Galleria\/config-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/assets\/plugins\/hours\/config.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/plugins\/hours\/config.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/assets\/plugins\/lists\/config.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/plugins\/lists\/config.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/plugins\/lists\/config-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/assets\/sass\/_config.scss": {
 		"createSourceMap": 0,
@@ -77,6 +392,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 1
 		},
+	"\/assets\/sass\/weekend-graduates-dealine.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/sass\/weekend-graduates-dealine.scss",
+		"outputAbbreviatedPath": "\/assets\/css\/weekend-graduates-dealine.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 1
+		},
 	"\/config.rb": {
 		"fileType": 131072,
 		"ignore": 0,
@@ -86,6 +417,39 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/design-files\/0050_14_05_JA_0423.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.34951e+06,
+		"inputAbbreviatedPath": "\/design-files\/0050_14_05_JA_0423.jpg",
+		"outputAbbreviatedPath": "\/design-files\/0050_14_05_JA_0423.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/design-files\/0050_14_05_JA_0469.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3.47642e+06,
+		"inputAbbreviatedPath": "\/design-files\/0050_14_05_JA_0469.jpg",
+		"outputAbbreviatedPath": "\/design-files\/0050_14_05_JA_0469.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/design-files\/0050_14_05_JA_0472.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.86605e+06,
+		"inputAbbreviatedPath": "\/design-files\/0050_14_05_JA_0472.jpg",
+		"outputAbbreviatedPath": "\/design-files\/0050_14_05_JA_0472.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/design-files\/0050_14_05_JA_1874.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -93,6 +457,50 @@
 		"initialSize": 732867,
 		"inputAbbreviatedPath": "\/design-files\/0050_14_05_JA_1874.jpg",
 		"outputAbbreviatedPath": "\/design-files\/0050_14_05_JA_1874.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/design-files\/0050_14_05_JA_2337.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.19885e+06,
+		"inputAbbreviatedPath": "\/design-files\/0050_14_05_JA_2337.jpg",
+		"outputAbbreviatedPath": "\/design-files\/0050_14_05_JA_2337.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/design-files\/0050_15_05_JA_3055.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.65637e+06,
+		"inputAbbreviatedPath": "\/design-files\/0050_15_05_JA_3055.jpg",
+		"outputAbbreviatedPath": "\/design-files\/0050_15_05_JA_3055.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/design-files\/0050_15_05_JA_5891.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.75229e+06,
+		"inputAbbreviatedPath": "\/design-files\/0050_15_05_JA_5891.jpg",
+		"outputAbbreviatedPath": "\/design-files\/0050_15_05_JA_5891.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/design-files\/0071_13_05_SB_254.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.00941e+06,
+		"inputAbbreviatedPath": "\/design-files\/0071_13_05_SB_254.jpg",
+		"outputAbbreviatedPath": "\/design-files\/0071_13_05_SB_254.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -108,6 +516,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/design-files\/Commencement Grads 09 TS 102.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.6718e+06,
+		"inputAbbreviatedPath": "\/design-files\/Commencement Grads 09 TS 102.jpg",
+		"outputAbbreviatedPath": "\/design-files\/Commencement Grads 09 TS 102.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/design-files\/commencement-homepage-00.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/design-files\/commencement-homepage-00.jpg",
+		"outputAbbreviatedPath": "\/design-files\/commencement-homepage-00.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/design-files\/sherrilyn-ifill.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -119,16 +549,25 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/design-files\/VC Commencement 1505 JA_6031.jpg": {
+	"\/design-files\/VC Commencement 1505 JA_3545.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 760980,
-		"inputAbbreviatedPath": "\/design-files\/VC Commencement 1505 JA_6031.jpg",
-		"outputAbbreviatedPath": "\/design-files\/VC Commencement 1505 JA_6031.jpg",
+		"initialSize": 2.43019e+06,
+		"inputAbbreviatedPath": "\/design-files\/VC Commencement 1505 JA_3545.jpg",
+		"outputAbbreviatedPath": "\/design-files\/VC Commencement 1505 JA_3545.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
+		},
+	"\/index-livestream.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/index-livestream.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/index.html": {
 		"fileType": 8192,

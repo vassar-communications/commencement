@@ -1,0 +1,27 @@
+
+
+[{
+ "galleryHome" : "",
+"id" : "homepage",
+"idleMode" : false,
+"imageCrop" : false,
+"modal" : false,
+"thumbnails" : false,
+"showImagenav" : true,
+"showCounter" : true,
+"showInfo" : true,
+"slidesLocation" : "",
+"height" : "1\/1.777","theme" : "blank","showinfo" : false,"autoplay" : "5000","showImagenav" : false,"transition" : "fade","showCounter" : false,"transitionSpeed" : "5000","imageCrop" : "landscape",
+"slides" : [{"description" : "", "title" : "", "url" : "/assets/images/slideshows/primary/Commencement-crowd-10-TS-9.jpg"},{"description" : "", "title" : "", "url" : "/assets/images/slideshows/primary/0050_14_05_JA_1874.jpg"}]},{
+ "galleryHome" : "",
+"id" : "2015",
+"idleMode" : true,
+"imageCrop" : false,
+"modal" : true,
+"thumbnails" : true,
+"showImagenav" : true,
+"showCounter" : true,
+"showInfo" : true,
+"slidesLocation" : "",
+"flickrSet" : "72157653950298932",
+"slides" : []}]
