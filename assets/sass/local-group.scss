@@ -416,7 +416,7 @@ h4.event__title {
         margin: 0 0 5%;
     }
     .u-pageHome .u-Video.u-Video--4x3 {
-        margin-top: 2.75em;
+        /* margin-top: 2.75em; */
     }
 }
 @media all and (min-width: $small) {
@@ -428,7 +428,7 @@ h4.event__title {
         position: static;
     }
     .u-lHeader {
-        padding: 0;
+        padding: 0 0 10em;
     }
     .u-Masthead {
         width: 100%;
@@ -460,14 +460,14 @@ h4.event__title {
     }
     .u-pageInner  {
         .u-lMain {
-            margin: 11em auto 2em;
+            /* margin: 11em auto 2em; */
         }
         .u-Masthead {
             padding: 1.5em 0 5em;
         }
     }
-    .galleria--content {
-        margin: 7em 0 2.5%;
+    .u-pageHome .galleria--content {
+        margin: 7em 0 -8em;
     }
     .u-NavSite {
         float: none;
@@ -549,7 +549,7 @@ h4.event__title {
         float: left
     }
     .u-pageHome .u-Video.u-Video--4x3 {
-        margin-top: 10em;
+        /* margin-top: 10em; */
     }
 }
 @media all and (min-width: $medium) {

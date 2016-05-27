@@ -106,6 +106,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/images\/0051_14_05_KF_0017.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 48005,
+		"inputAbbreviatedPath": "\/assets\/images\/0051_14_05_KF_0017.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/0051_14_05_KF_0017.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/0051_14_05_KF_0294.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 146809,
+		"inputAbbreviatedPath": "\/assets\/images\/0051_14_05_KF_0294.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/0051_14_05_KF_0294.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/0051_15_05_KR_0131.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 119116,
+		"inputAbbreviatedPath": "\/assets\/images\/0051_15_05_KR_0131.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/0051_15_05_KR_0131.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/images\/Commencement-0705-SRA_3280648.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -461,6 +494,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/design-files\/0050_14_05_JA_2162.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.3546e+06,
+		"inputAbbreviatedPath": "\/design-files\/0050_14_05_JA_2162.jpg",
+		"outputAbbreviatedPath": "\/design-files\/0050_14_05_JA_2162.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/design-files\/0050_14_05_JA_2337.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -468,6 +512,17 @@
 		"initialSize": 2.19885e+06,
 		"inputAbbreviatedPath": "\/design-files\/0050_14_05_JA_2337.jpg",
 		"outputAbbreviatedPath": "\/design-files\/0050_14_05_JA_2337.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/design-files\/0050_15_05_JA_2782.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3.15384e+06,
+		"inputAbbreviatedPath": "\/design-files\/0050_15_05_JA_2782.jpg",
+		"outputAbbreviatedPath": "\/design-files\/0050_15_05_JA_2782.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -483,6 +538,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/design-files\/0050_15_05_JA_3115.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.05867e+06,
+		"inputAbbreviatedPath": "\/design-files\/0050_15_05_JA_3115.jpg",
+		"outputAbbreviatedPath": "\/design-files\/0050_15_05_JA_3115.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/design-files\/0050_15_05_JA_3461.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.97148e+06,
+		"inputAbbreviatedPath": "\/design-files\/0050_15_05_JA_3461.jpg",
+		"outputAbbreviatedPath": "\/design-files\/0050_15_05_JA_3461.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/design-files\/0050_15_05_JA_5891.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -494,6 +571,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/design-files\/0051_14_05_KF_0017.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.86534e+06,
+		"inputAbbreviatedPath": "\/design-files\/0051_14_05_KF_0017.jpg",
+		"outputAbbreviatedPath": "\/design-files\/0051_14_05_KF_0017.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/design-files\/0051_14_05_KF_0294.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4.40601e+06,
+		"inputAbbreviatedPath": "\/design-files\/0051_14_05_KF_0294.jpg",
+		"outputAbbreviatedPath": "\/design-files\/0051_14_05_KF_0294.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/design-files\/0051_15_05_KR_0131.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3.13094e+06,
+		"inputAbbreviatedPath": "\/design-files\/0051_15_05_KR_0131.jpg",
+		"outputAbbreviatedPath": "\/design-files\/0051_15_05_KR_0131.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/design-files\/0071_13_05_SB_254.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -501,6 +611,17 @@
 		"initialSize": 2.00941e+06,
 		"inputAbbreviatedPath": "\/design-files\/0071_13_05_SB_254.jpg",
 		"outputAbbreviatedPath": "\/design-files\/0071_13_05_SB_254.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/design-files\/Commencement 0705 SRA_3280648.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.09800e+06,
+		"inputAbbreviatedPath": "\/design-files\/Commencement 0705 SRA_3280648.jpg",
+		"outputAbbreviatedPath": "\/design-files\/Commencement 0705 SRA_3280648.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
