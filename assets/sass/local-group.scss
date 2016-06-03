@@ -180,7 +180,7 @@ li {
     text-transform: uppercase;
 }
 .galleria-info-description {
-    font: italic $fontWeightBold 3em/1 $serif !important;
+    font: normal $fontWeightNormal 1em/1 $sans-serif !important;
 }
 .u-Figure.quad {
     .u-Figure__caption {
@@ -352,9 +352,6 @@ h4.event__title {
             padding-right: 1em;
         }
     }
-    .galleria-info-description {
-        font: italic $fontWeightBold 6em/1 $serif !important;
-    }
     .event_desc {
         margin-left: 0
     }
@@ -390,11 +387,11 @@ h4.event__title {
         padding-top: 2.2em;
     }
     .galleria-info {
-        width: 31em !important;
+        width: auto !important;
         top: auto !important;
-        left: 50% !important;
-        bottom: 15% !important;
-        margin-left: -15.5em !important;
+        left: auto !important;
+        bottom: 5% !important;
+        right: 5% !important;
     }
     .u-Figure.speaker {
         overflow: hidden;
@@ -665,11 +662,27 @@ a.fn.org.url.u-VCard__fn.u-VCard__item.u-VCard__org.u-VCard__url:link,
         background-size: cover;
 }
 .galleria-info-text {
-    background-color: transparent !important;
+    background-color: $linkColor;
+    background-color: rgba(192, 0, 78, 0.5) !important;
 }
-.galleria-info-description {
+.galleria-info-description.u-Figure__caption--description {
     color: #fff !important;
-    color: rgba(255, 255, 255, 0.80) !important;
+    a {
+        border-bottom: 1px solid #fff;
+    }
+    a:visited {
+        color: #fff !important;
+        border-bottom: 1px solid #fff;
+    }
+    a:hover,
+    a:focus {
+        color: $linkColorHoverFocus !important;
+        border-bottom: 1px solid $linkColorHoverFocus !important;
+    }
+    a:active {
+        color: $linkColorActive !important;
+        border-bottom: 1px solid $linkColorActive !important;
+    }
 }
 .u-Figure.speaker {
     background-color: #008AFF;
