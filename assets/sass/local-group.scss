@@ -352,6 +352,9 @@ h4.event__title {
     .Module__title {
         font-size: .75em;
     }
+    .Module__link .Module__title {
+        display: inline;
+    }
 }
 .commArchiveCeremony {
     text-align: center;
@@ -650,7 +653,6 @@ a:active {
 .u-Search__cancel:link,
 h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link,
 .Module__headerLink:link,
-.Module__link:link,
 .Module--sidebar a:link,
 .moreLink:link,
 a.fn.org.url.u-VCard__fn.u-VCard__item.u-VCard__org.u-VCard__url,
