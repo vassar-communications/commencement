@@ -1,0 +1,143 @@
+<?php
+	
+	//	This is the current path 
+	$path = getcwd();
+	
+	//	Check that path for "preflight2"
+	//	If it finds it, we are on preflight, so use a different path
+	if (strstr($path, 'preflight2') !== false) {
+		echo "<!-- we're on preflight -->";
+		$include_path = '/web/sites/preflight2/web/commencement/assets/includes/';
+	}
+	//	If not, assume we are on production
+	else
+		$include_path = '/web/sites/www/web/commencement/assets/includes/';
+			
+	$page_title = "Ceremony";
+	$page_classes = "page--ceremony";
+
+	include($include_path.'functions.php');
+	include($include_path.'header.php');
+?>
+<div class="section header-cover">
+    <div class="header-cover__container">
+        <h1 class="animation-edge no-border">
+            <b class="anim-component-edge1">One Hundred Fifty-Sixth </b>
+            <b class="anim-component-edge2">Commencement</b>
+        </h1>
+    </div>
+</div>
+<div id="welcome" class="section animate-this ceremony">
+    <div class="section__inner">
+        
+        <div class="section__content">
+            
+            <div>
+                <p class="intro">Welcome to the ceremony. Take a look around the site and check out the <a href="program.html" title="ceremony program" target="_self">ceremony program</a>  and <a href="../weekend/index.html" title="weekend eve nts" target="_self">weekend events</a>. <!-- The ceremony archive will be available at 1pm EDT. --></p>
+            </div>
+            
+            <div class="width-xxwide">
+                
+                <div class="element">
+                  <div class="translation-choices">
+                      <ul>
+                          <li><a class="link--has-arrow" href="ceremony-spanish.html">Watch with Spanish audio translation</a></li>
+                          <li><a class="link--has-arrow" href="ceremony-mandarin.html">Watch with Mandarin audio translation</a></li>
+                      </ul>
+                  </div>
+                  <!-- <div class="u-Video"> --><a href="https://vimeo.com/421899462" target="_blank"><img src="../assets/images/Vassar-Commencement-Slate.jpg" width="1920" height="auto" alt="Watch the One Hundred Fifty-Sixth Commencement Ceremony Video"/></a>
+                  <!-- <iframe src="https://player.vimeo.com/video/421899462?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p> --><!-- <iframe style='border:2px solid black;' width='640px' height='360px'scrolling='no' frameborder='0' allowfullscreen src='https://my.videolinq.net/player?idPublic=dzWAtsG6'></iframe> --><!-- </div> -->
+                </div>
+                
+            </div>
+            
+            <h2 class="grad-darkburg-red">Your Speakers</h2>
+                    
+            <div class="grid-2-cols width-wide">
+                
+                <div class="element">
+                    <div class="image--diagonal-crop__container"><img style="margin-bottom: 1em" src="../assets/images/meet-bradley.jpg" alt="Elizabeth Bradley, President"/></div>
+                    <p class="type-regular-condensed"><strong>Elizabeth Howe Bradley,</strong> President of Vassar College, Inaugurated September 2017</p><p class="type-regular-condensed">Before coming to Vassar, <a href="https://president.vassar.edu/biography/">Elizabeth H. Bradley</a> served as Director of the Brady-Johnson Program in Grand Strategy and Head of Branford College at Yale University. She was founder and faculty director of the Yale Global Health Leadership Institute, which operates education and research programs in six countries. During her tenure at Vassar, Bradley has established relationships with the University of Global Health Equity, a medical school in Rwanda, and with a secondary school for gifted students in Beijing. Last year, she forged a partnership with Columbia University’s Mailman School of Public Health that will enable Vassar students to earn a master’s degree in public health. Over the past two years she has worked with Vassar faculty, administrators, students, and staff to establish the Engaged Pluralism Initiative, which galvanizes new ways to make the campus more inclusive by enhancing a sense of belonging and community.</p>
+                    <!-- <p><a class="link--video viewbox-link" data-title="Welcome Remarks from the Vassar College President, Elizabeth H. Bradley" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/420774529" tabindex="0">Watch the Welcoming Remarks</a></p>-->
+                    <p><a class="link--has-arrow" href="bradley-commencement-speech.html">Welcoming Remarks Transcript</a></p>
+                </div>
+                <div class="element">
+                    <div class="image--diagonal-crop__container"><img style="margin-bottom: 1em" src="../assets/images/meet-blum.jpg" alt="Jason Blum ’91"/></div>
+                        <p class="type-regular-condensed"><strong>Jason Blum ’91,</strong> Commencement speaker, three-time Academy Award nominee, two-time Emmy Award-winning producer, and Vassar Trustee</p><p class="type-regular-condensed">A film major at Vassar, <a href="https://stories.vassar.edu/2020/award-winning-film-and-tv-producer-jason-blum-91-to-deliver-commencement-address.html">Jason Blum</a> is founder and CEO of Blumhouse Productions, a multi-media company that pioneered a new model of studio filmmaking, producing high quality, microbudget films. He was nominated for Academy Awards for his work producing <em>BlacKkKlansman</em>, <em>Get Out</em>, and <em>Whiplash</em>. Blum has been recognized by <em>TIME magazine’s</em> 100 list of the world’s most influential people and has appeared several times on <em>Vanity Fair’s</em> New Establishment List. Blum said his Vassar experience had played a key role in shaping his future. “The courses I took at Vassar, as well as the other activities I was involved in, fueled my critical thinking skills and made me more curious about the world,” he said. “Those skills are imperative for anyone in the rapidly evolving entertainment industry.”<p/>
+                        <!-- <p><a class="link--video viewbox-link" data-title="Commencement Address from Jason Blum" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/420978656" tabindex="0">Watch the Commencement Address</a></p> -->
+                        <p><a class="link--has-arrow" href="blum-commencement-speech.html">Commencement Address Script</a></p>
+                </div>
+                
+                <!-- bio -->
+                <div class="media person-bio">
+                    <div class="media__header">
+                        <h3 class="media__title">William Hoynes</h3>
+                        <p class="media__subtitle">Dean of the Faculty</p>
+                    </div>
+                    <div class="media__figure ">
+                        <div class="media__figure "><img src="../assets/images/hoynes-william_72.jpg" width="100%" height="auto" alt="William Hoynes"/> 
+                        </div>
+                    </div>
+
+                    <div class="media__content">
+                        <p>Professor of Sociology and former Director of both the American Studies Program and the Media Studies Program at Vassar College offers his remarks.</p>
+                        <p><a class="link--video viewbox-link" data-title="William Hoynes" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/421136428" tabindex="0">Watch the video</a></p>
+                    </div>
+                </div>
+                <!-- end bio -->
+
+                <!-- bio -->
+                <div class="media person-bio">
+                    <div class="media__header">
+                        <h3 class="media__title">Vassar College One Hundred Fifty-Sixth Commencement Program</h3>
+                    <!-- <p class="media__subtitle">Hillsborough, NC - Biology major</p> -->
+                    </div>
+                    <div class="media__figure ">
+                        <a href="../assets/images/Commencement-corrected-May-24-early.pdf"><img src="../assets/images/commencement-program-cover.jpg" width="100%" height="auto" alt="Vassar College One Hundred Fifty-Sixth Commencement Program Cover"></a>
+                    </div>
+
+                    <div class="media__content">
+                        <p><a class="link--has-arrow" href="../assets/images/Commencement-corrected-May-24-early.pdf">Download the<br /> Program (PDF)</a></p>
+                    </div>
+                </div>
+                <!-- end bio -->
+                
+                <!-- bio -->
+                <div class="media person-bio">
+                    <div class="media__header">
+                        <h3 class="media__title">Members of the Alumnae/i Association of Vassar College congratulates the class of 2020.</h3>
+                    </div>
+                    <div class="media__figure ">
+                        <img src="../assets/images/AAVC-video-hankins.jpg" width="100%" height="auto" alt="Video Congratulations"/>
+                    </div>
+
+                    <div class="media__content">
+                        <p><a class="link--video viewbox-link" data-title="Members of the Alumnae/i Association of Vassar College congratulates the class of 2020." data-caption="" data-type="video" data-href="https://www.youtube.com/embed/BqLju0_3tYM" tabindex="0">Watch the video</a></p>
+                    </div>
+                </div>
+                <!-- end bio -->
+                
+            </div>        
+        </div>							
+    </div>
+</div>
+
+<div id="students" class="section theme-dark-burgundy section--cover-img animate-this section--fancylayout section--bio-grid top-66pfrom-topOfWindow top-50pfrom-topOfWindow top-hits-topOfWindow memories">
+    <div class="section__inner">
+        <h2>Four Years of Memories</h2>
+            <div class="section__content">
+                <div class="grid-1-cols bio-listing">
+                    <div class="u-Video"><iframe src="https://player.vimeo.com/video/421491298?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <!-- <img style="margin-bottom: 1em" src="../assets/images/placeholder-16x9.gif" alt="">-->
+                </div>
+            </div>
+    </div>
+</div>
+
+<?php echo join_the_convo(); ?>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
+
+	</body>
+</html>

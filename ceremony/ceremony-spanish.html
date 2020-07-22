@@ -1,0 +1,55 @@
+<?php
+	//	This is the current path 
+	$path = getcwd();
+	
+	//	Check that path for "preflight2"
+	//	If it finds it, we are on preflight, so use a different path
+	if (strstr($path, 'preflight2') !== false) {
+		echo "<!-- we're on preflight -->";
+		$include_path = '/web/sites/preflight2/web/commencement/assets/includes/';
+	}
+	//	If not, assume we are on production
+	else
+		$include_path = '/web/sites/www/web/commencement/assets/includes/';	
+
+	$page_title = "Ceremony - Spanish Translation";
+
+	include($include_path.'functions.php');	
+	include($include_path.'header.php');
+?>
+<div id="welcome" class="section animate-this ceremony translations">
+    <div class="section__inner">
+        
+        <div class="section__content">
+            
+        <h1 class="grad-darkburg-red">Ciento Cincuenta y Seis Comienzo</h1>
+            <div>
+                <p class="intro">Bien venidos a la Ceremonia de Graduación Virtual 2020. Echa un vistazo para ver los otro <a href="../weekend/index.html">eventos</a> del fin de semana.</p>
+            </div>
+            <div class="width-xxwide">
+                
+                <div class="element">
+                  <div class="translation-choices">
+                      <ul>
+                          <li><a class="link--has-arrow" href="ceremony-mandarin.html">Watch with Mandarin audio translation</a></li>
+                          <li><a class="link--has-arrow" href="index.html">Watch with English audio translation</a></li>
+                      </ul>
+                  </div>
+                  <!-- <a href="https://vimeo.com/421964993" target="_blank"><img src="../assets/images/Vassar-Commencement-Slate.jpg" width="1920" height="auto" alt="Watch the One Hundred Fifty-Sixth Commencement Ceremony Video"/></a> -->
+                  <div class="u-Video"><iframe src="https://player.vimeo.com/video/421964993" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+</div>
+
+<?php echo join_the_convo(); ?>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
+
+	</body>
+</html>

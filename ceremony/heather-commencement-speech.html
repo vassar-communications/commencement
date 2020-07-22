@@ -1,0 +1,53 @@
+<?php
+	//	This is the current path 
+	$path = getcwd();
+	
+	//	Check that path for "preflight2"
+	//	If it finds it, we are on preflight, so use a different path
+	if (strstr($path, 'preflight2') !== false) {
+		echo "<!-- we're on preflight -->";
+		$include_path = '/web/sites/preflight2/web/commencement/assets/includes/';
+	}
+	//	If not, assume we are on production
+	else
+		$include_path = '/web/sites/www/web/commencement-200524/assets/includes/';	
+	
+	$page_title = "Heather Phan Nguyen - Commencement Address";
+
+	include($include_path.'functions.php');	
+	include($include_path.'header.php');
+?>
+<div id="welcome" class="section animate-this conferring-of-degrees">
+  <div class="section__inner">
+    <div class="section__content">
+    <h1 class="grad-darkburg-red">Heather Phan Nguyen</h1>
+      <div class="grid-1-cols width-wide">
+          
+<!--        <div class="element"> -->	        
+
+<h3>Commencement Address Transcript</h3>
+<p>May 2020</p>
+<p>Hello. Four years ago, I was an awkward teenager who had just graduated from high school. There were a lot of things that I didn’t know—I had no idea what I was going to study in college, or what the future held for me once I left home. I spent my summer doing everything in my power to procrastinate reading <em>The Wild Life of Our Bodies</em> and being way too active on the Vassar Class of 2020 Facebook group, dreaming of what my own college life would be like.</p>
+<p>As a first-generation, low-income student, the path to higher education was rather hazy, as I didn’t have an immediate precedent for what to expect during the application process, let alone what the experience might be like. I would like to take a moment to appreciate the resources that helped connect me to Vassar, from encouraging school counselors to strangers on Twitter who provided me with reassurance and care that I needed. I’d also like to thank my mom, for all of her support and love, and for letting me move 2000 miles away to attend a school she’d never heard about, even though she initially thought that my acceptance letter might’ve been a pyramid scheme. Cảm ơn mẹ yêu của con (<em>translation: Thank you, my dear mother</em>).</p>
+<p>Luckily, Vassar turned out to be the real deal. And now, as I stand on the precipice of graduation, I feel grateful and humbled by all that I’ve learned during the past four years at this place I’ve grown to call home. For example, four years ago, I had no idea what a panopticon was, but now that I’m graduating with a whole degree in Media Studies, I do. There are many things that I’ve learned at Vassar that I will cherish for a lifetime; like the colors of a Poughkeepsie sunset, the feeling of a sunny day spent lounging on the Quad, and the best time to get to the Deece if you want to avoid the dinner rush (5pm, but I’ve been told 4:30pm if you want to secure a booth).</p>
+<p>And yet, despite all I’ve learned, I somehow feel as though that there is still more that I don’t know, more than ever before. I don’t know what the future holds, especially during these uncertain times. Something I didn’t realize about young adulthood is that it’s terrifying, with all of the unknowns and uncertainties that we are dealt. On top of it all, we are constantly changing, growing, evolving to versions of ourselves that align with who we want to be as we move through life and grapple with new identities, roles, and circumstances. It’s scary.</p>
+<p>But what motivates me to leave my comfort zone and pursue growth in spite of it all is community. Throughout my Vassar experience, I can say wholeheartedly that the people I’ve met here are irreplaceable, and get me through each and every day. My very first day as a student at Vassar was at Transitions pre-orientation, where the first words I heard at a welcome dinner was “Vassar is not a gift to you—you are a gift to Vassar”. This message stuck with me, and not just because I’m a Leo. I had no idea how true these words would ring throughout my time at school; that although attending Vassar is an immense privilege, the secret of it all is that the best parts of it is rooted in community—in me, in you, in all of us and in each other. The bonds we share are nothing short of a gift, and I am especially proud of the Class of 2020 for all that we hold within us—wit, kindness, friendship, resolve, and so much more.</p>
+<p>As a class, we’ve been through a lot together; our time on campus has come with reckoning with so much change and uncertainty. We kicked off our first year with the 2016 election, and if that wasn’t enough to rock our worlds, we also experienced an entirely new dining hall, a new meal plan, new policies for house teams and student fellows, new academic requirements to graduate, a new college president, and now, Zoom classes. It’s a lot to adapt to, but I can confidently say that we’ve done well, and that our efforts are deserving of celebration. Despite all of the change, we’ve emerged from Vassar with pride. Nothing can shake what we’ve learned during these past four years. Thank you to all of those who have come before us for laying the groundwork, and thank you to all of those who will come after us for building onto our legacies. Thank you for your gifts, 2020. Thank you for teaching me how to exhibit kindness no matter where I go, for challenging my very definitions of what friendship and love can mean, for highlighting the importance of knowing how to make the best Deecerts, and for being yourself and a part of what makes our community so special. I hope nothing but the very best for all of you, with love.</p>
+<p>Thank you.</p>
+			
+        <!-- </div> -->
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- end page-content -->
+
+<?php echo join_the_convo(); ?>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
+
+	</body>
+</html>

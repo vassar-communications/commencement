@@ -1,0 +1,224 @@
+<?php
+	//	This is the current path 
+	$path = getcwd();
+	
+	//	Check that path for "preflight2"
+	//	If it finds it, we are on preflight, so use a different path
+	if (strstr($path, 'preflight2') !== false) {
+		echo "<!-- we're on preflight -->";
+		$include_path = '/web/sites/preflight2/web/commencement/assets/includes/';
+	}
+	//	If not, assume we are on production
+	else
+		$include_path = '/web/sites/www/web/commencement/assets/includes/';	
+	
+	$page_title = "Conferring of Degrees";
+
+	include($include_path.'functions.php');	
+	include($include_path.'header.php');
+?>
+<div id="welcome" class="section animate-this conferring-of-degrees">
+  <div class="section__inner">
+    <div class="section__content">
+    <h1 class="grad-darkburg-red">Conferring of Degrees</h1>
+      <div class="grid-1-cols width-wide">
+          
+          <div class="item__list list--alpha">
+              <p>By Department</p>
+              <ul class="alphaList__nav"><li><a href="#a">A</a></li><li><a href="#b">B</a></li><li><a href="#c">C</a></li><li><a href="#d">D</a></li><li><a href="#e">E</a></li><li><a href="#f">F</a></li><li><a href="#g">G</a></li><li><a href="#h">H</a></li><li><a href="#i">I</a></li><li><a href="#j">J</a></li><!--<li><a href="#k">K</a></li>--><li><a href="#l">L</a></li><li><a href="#m">M</a></li><li><a href="#n">N</a></li><!--<li><a href="#o">O</a></li>--><li><a href="#p">P</a></li><!--<li><a href="#q">Q</a></li>--><li><a href="#r">R</a></li><li><a href="#s">S</a></li><!--<li><a href="#t">T</a></li>--><li><a href="#u">U</a></li><li><a href="#v">V</a></li><li><a href="#w">W</a></li><!--<li><a href="#x">X</a></li><li><a href="#y">Y</a></li><li><a href="#z">Z</a></li>--></ul></div>
+        
+        <div class="element">
+			
+          <div id="a" class="parallelogram">
+          <p class="shape-content"><strong>Africana Studies</strong><a class="link--video viewbox-link" data-title="Africana Studies" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416688371" tabindex="0">Watch the video</a></p>
+          </div>
+          <div class="parallelogram">
+          <p class="shape-content"><strong>American Studies</strong><a class="link--video viewbox-link" data-title="American Studies" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416688554" tabindex="0">Watch the video</a></p>
+          </div>
+			
+          <div class="parallelogram humanities">
+          <p class="shape-content"><strong>Anthropology</strong><a class="link--video viewbox-link" data-title="Anthropology" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416688691" tabindex="0">Watch the video</a></p>
+          </div>
+
+          <div class="parallelogram art">
+          <p class="shape-content"><strong>Art</strong><a class="link--video viewbox-link" data-title="Art" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416688798" tabindex="0">Watch the video</a></p>
+          </div>
+
+          <div class="parallelogram">
+          <p class="shape-content"><strong>Asian Studies</strong><a class="link--video viewbox-link" data-title="Asian Studies" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416688877" tabindex="0">Watch the video</a></p>
+          </div>
+			
+          <div id="b" class="parallelogram science">
+          <p class="shape-content"><strong>Biochemistry</strong><a class="link--video viewbox-link" data-title="Biochemistry" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416689071" tabindex="0">Watch the video</a></p>
+          </div>
+         
+          <div class="parallelogram science">
+          <p class="shape-content"><strong>Biology</strong><a class="link--video viewbox-link" data-title="Biology" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416689181" tabindex="0">Watch the video</a></p>
+          </div>
+
+          <div id="c" class="parallelogram science">
+          <p class="shape-content"><strong>Chemistry</strong><a class="link--video viewbox-link" data-title="Chemistry" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416689270" tabindex="0">Watch the video</a></p>
+          </div>
+			
+          <div class="parallelogram">
+          <p class="shape-content"><strong>Chinese and Japanese</strong><a class="link--video viewbox-link" data-title="Chinese and Japanese" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416689368" tabindex="0">Watch the video</a></p>
+          </div>
+
+          <div class="parallelogram science">
+          <p class="shape-content"><strong>Cognitive Science</strong><a class="link--video viewbox-link" data-title="Cognitive Science" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416689484" tabindex="0">Watch the video</a></p>
+          </div>
+
+          <div class="parallelogram science">
+          <p class="shape-content"><strong>Computer Science</strong><a class="link--video viewbox-link" data-title="Computer Science" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416689803" tabindex="0">Watch the video</a></p>
+          </div>
+			
+          <div id="d" class="parallelogram humanities">
+          <p class="shape-content"><strong>Drama</strong><a class="link--video viewbox-link" data-title="Drama" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416689890" tabindex="0">Watch the video</a></p>
+          </div> 			  
+
+          <div id="e" class="parallelogram science">
+          <p class="shape-content"><strong>Earth Science and Geography</strong><a class="link--video viewbox-link" data-title="Earth Science and Geography" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416690114" tabindex="0">Watch the video</a></p>
+          </div>
+
+          <div class="parallelogram science">
+          <p class="shape-content"><strong>Earth Science and Society</strong><a class="link--video viewbox-link" data-title="Earth Science and Society" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416689998" tabindex="0">Watch the video</a></p>
+          </div>
+			
+          <div class="parallelogram economics">
+          <p class="shape-content"><strong>Economics</strong><a class="link--video viewbox-link" data-title="Economics" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416690223" tabindex="0">Watch the video</a></p>
+          </div> 			  
+			
+          <div class="parallelogram education">
+          <p class="shape-content"><strong>Education</strong><a class="link--video viewbox-link" data-title="Education" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416690355" tabindex="0">Watch the video</a></p>
+          </div>
+
+          <div class="parallelogram humanities">
+          <p class="shape-content"><strong>English</strong><a class="link--video viewbox-link" data-title="English" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416690426" tabindex="0">Watch the video</a></p>
+          </div>
+			
+          <div class="parallelogram science">
+          <p class="shape-content"><strong>Environmental Studies</strong><a class="link--video viewbox-link" data-title="Environmental Studies" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416690509" tabindex="0">Watch the video</a></p>
+          </div> 			  
+			
+          <div id="f" class="parallelogram humanities">
+          <p class="shape-content"><strong>Film</strong><a class="link--video viewbox-link" data-title="Film" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416690607" tabindex="0">Watch the video</a></p>
+          </div>
+
+          <div class="parallelogram humanities">
+          <p class="shape-content"><strong>French and Francophone Studies</strong><a class="link--video viewbox-link" data-title="French and Francophone Studies" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416690677" tabindex="0">Watch the video</a></p>
+          </div>
+			
+          <div id="g" class="parallelogram humanities">
+          <p class="shape-content"><strong>German Studies</strong><a class="link--video viewbox-link" data-title="German Studies" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416690782" tabindex="0">Watch the video</a></p>
+          </div> 			  
+			
+          <div class="parallelogram humanities">
+          <p class="shape-content"><strong>Greek and Roman Studies</strong><a class="link--video viewbox-link" data-title="Greek and Roman Studies" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416690862" tabindex="0">Watch the video</a></p>
+          </div>
+
+          <div id="h" class="parallelogram">
+          <p class="shape-content"><strong>Hispanic Studies</strong><a class="link--video viewbox-link" data-title="Hispanic Studies" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416690953" tabindex="0">Watch the video</a></p>
+          </div>
+			
+          <div class="parallelogram humanities">
+          <p class="shape-content"><strong>History</strong><a class="link--video viewbox-link" data-title="History" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416691060" tabindex="0">Watch the video</a></p>
+          </div> 			  
+			
+          <div id="i" class="parallelogram">
+          <p class="shape-content"><strong>Independent Program</strong><a class="link--video viewbox-link" data-title="Independent Program" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416691152" tabindex="0">Watch the video</a></p>
+          </div>
+
+          <div class="parallelogram">
+          <p class="shape-content"><strong>International Studies</strong><a class="link--video viewbox-link" data-title="International Studies" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416691254" tabindex="0">Watch the video</a></p>
+          </div>
+			
+          <div class="parallelogram humanities">
+          <p class="shape-content"><strong>Italian</strong><a class="link--video viewbox-link" data-title="Italian" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416691341" tabindex="0">Watch the video</a></p>
+          </div> 			  
+			
+          <div id="j" class="parallelogram">
+          <p class="shape-content"><strong>Jewish Studies</strong><a class="link--video viewbox-link" data-title="Jewish Studies" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416691407" tabindex="0">Watch the video</a></p>
+          </div>
+
+          <div id="l" class="parallelogram">
+          <p class="shape-content"><strong>Latin American and Latino/a Studies</strong><a class="link--video viewbox-link" data-title="Latin American and Latino/a Studies" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416691506" tabindex="0">Watch the video</a></p>
+          </div>
+			
+          <div id="m" class="parallelogram science">
+          <p class="shape-content"><strong>Mathematics and Statistics</strong><a class="link--video viewbox-link" data-title="Mathematics and Statistics" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416691613" tabindex="0">Watch the video</a></p>
+          </div> 			  
+			
+          <div class="parallelogram">
+          <p class="shape-content"><strong>Media Studies</strong><a class="link--video viewbox-link" data-title="Media Studies" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416691678" tabindex="0">Watch the video</a></p>
+          </div>
+
+          <div class="parallelogram humanities">
+          <p class="shape-content"><strong>Medieval and Renaissance Studies</strong><a class="link--video viewbox-link" data-title="Medieval and Renaissance Studies" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416691750" tabindex="0">Watch the video</a></p>
+          </div>
+			
+          <div class="parallelogram music">
+          <p class="shape-content"><strong>Music</strong><a class="link--video viewbox-link" data-title="Music" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416691854" tabindex="0">Watch the video</a></p>
+          </div> 			  
+			
+          <div id="n" class="parallelogram science">
+          <p class="shape-content"><strong>Neuroscience and Behavior</strong><a class="link--video viewbox-link" data-title="Neuroscience and Behavior" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416691928" tabindex="0">Watch the video</a></p>
+          </div>
+
+          <div id="p" class="parallelogram philosophy">
+          <p class="shape-content"><strong>Philosophy</strong><a class="link--video viewbox-link" data-title="Philosophy" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416692070" tabindex="0">Watch the video</a></p>
+          </div>
+			
+          <div class="parallelogram science">
+          <p class="shape-content"><strong>Physics and Astronomy</strong><a class="link--video viewbox-link" data-title="Physics and Astronomy" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416692178" tabindex="0">Watch the video</a></p>
+          </div> 			  
+			
+          <div class="parallelogram humanities">
+          <p class="shape-content"><strong>Political Science</strong><a class="link--video viewbox-link" data-title="Political Science" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416692247" tabindex="0">Watch the video</a></p>
+          </div>
+
+          <div class="parallelogram science">
+          <p class="shape-content"><strong>Psychological Science</strong><a class="link--video viewbox-link" data-title="Psychological Science" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416692323" tabindex="0">Watch the video</a></p>
+          </div>
+			
+          <div id="r" class="parallelogram religion">
+          <p class="shape-content"><strong>Religion</strong><a class="link--video viewbox-link" data-title="Religion" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416692421" tabindex="0">Watch the video</a></p>
+          </div>           			  
+			
+          <div class="parallelogram humanities">
+          <p class="shape-content"><strong>Russian Studies</strong><a class="link--video viewbox-link" data-title="Russian Studies" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416692499" tabindex="0">Watch the video</a></p>
+          </div>
+
+          <div id="s" class="parallelogram science">
+          <p class="shape-content"><strong>Science, Technology and Society</strong><a class="link--video viewbox-link" data-title="Science, Technology and Society" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416692583" tabindex="0">Watch the video</a></p>
+          </div>
+			
+          <div class="parallelogram">
+          <p class="shape-content"><strong>Sociology</strong><a class="link--video viewbox-link" data-title="Sociology" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416692698" tabindex="0">Watch the video</a></p>
+          </div>           			  
+			
+          <div id="u" class="parallelogram">
+          <p class="shape-content"><strong>Urban Studies</strong><a class="link--video viewbox-link" data-title="Urban Studies" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416692784" tabindex="0">Watch the video</a></p>
+          </div>
+
+          <div id="v" class="parallelogram humanities">
+          <p class="shape-content"><strong>Victorian Studies</strong><a class="link--video viewbox-link" data-title="Victorian Studies" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416692895" tabindex="0">Watch the video</a></p>
+          </div>
+			
+          <div id="w" class="parallelogram">
+          <p class="shape-content"><strong>Women’s Studies</strong><a class="link--video viewbox-link" data-title="Women’s Studies" data-caption="" data-type="video" data-href="https://player.vimeo.com/video/416693009" tabindex="0">Watch the video</a></p>
+          </div>           			  
+			
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- end page-content -->
+
+<?php echo join_the_convo(); ?>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
+
+	</body>
+</html>

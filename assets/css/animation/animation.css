@@ -1,0 +1,429 @@
+/*	Base styling */
+html.screen-2-active {
+  background-image: linear-gradient(to right, #641a2b 0%, #951829 100%); }
+
+h1 span {
+  display: block;
+  font-style: italic; }
+
+.intro {
+  margin-bottom: 1em; }
+
+.program-cover {
+  position: relative; }
+  .program-cover:before {
+    position: absolute;
+    background-image: url(../../images/2020.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+  .program-cover * {
+    position: relative;
+    z-index: 10; }
+
+.zoom-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.zoom-spark {
+  width: 1px;
+  height: 1px;
+  position: absolute; }
+
+/*	Animations */
+@keyframes focus-in {
+  from {
+    opacity: 0;
+    transform: scale(1.2); }
+  to {
+    opacity: 1;
+    transform: scale(1); } }
+
+@keyframes zoom-spark-in {
+  0% {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    transform: rotate(0); }
+  50% {
+    opacity: 1;
+    width: 50vw;
+    height: 50vw;
+    transform: rotate(45deg); }
+  100% {
+    opacity: 0;
+    width: 100vw;
+    height: 100vw;
+    transform: rotate(90deg); } }
+
+@keyframes zoom-spark-in-ray {
+  0% {
+    opacity: 0;
+    width: 1px;
+    height: 1px; }
+  50% {
+    opacity: 1;
+    width: 50vw;
+    height: 50vw; }
+  100% {
+    opacity: 0;
+    width: 100vw;
+    height: 100vw; } }
+
+@keyframes zoom-spark-in-reverse {
+  0% {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    transform: rotate(0); }
+  50% {
+    opacity: 1;
+    width: 50vw;
+    height: 50vw;
+    transform: rotate(-45deg); }
+  100% {
+    opacity: 0;
+    width: 100vw;
+    height: 100vw;
+    transform: rotate(-90deg); } }
+
+.whiteblast {
+  background: radial-gradient(ellipse at center, white 42%, white 50%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 50%; }
+
+@keyframes whiteblast {
+  0% {
+    opacity: 0;
+    width: 1px;
+    height: 1px; }
+  100% {
+    opacity: 1;
+    width: 140vw;
+    height: 140vw; } }
+
+@keyframes cover-zoom-out {
+  from {
+    opacity: 1;
+    transform: scale(1); }
+  to {
+    opacity: 0;
+    transform: scale(4); } }
+
+@keyframes wipe-in {
+  from {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+    transform: translateX(-1em); }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transform: translateX(0); } }
+
+@keyframes wipe-in-no-opacity {
+  from {
+    clip-path: inset(0 100% 0 0);
+    transform: translateX(-1em); }
+  to {
+    clip-path: inset(0 0 0 0);
+    transform: translateX(0); } }
+
+@keyframes animation-shift-in-left {
+  from {
+    letter-spacing: 0.1em;
+    opacity: 0;
+    transform: translateX(-0.6em); }
+  to {
+    letter-spacing: -0.04em;
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes animation-shift-in-right {
+  from {
+    letter-spacing: 0.1em;
+    opacity: 0;
+    transform: translateX(0.6em); }
+  to {
+    letter-spacing: -0.04em;
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes animation-shift-out-left {
+  from {
+    opacity: 1;
+    transform: translateX(0); }
+  to {
+    opacity: 0;
+    transform: translateX(-0.6em); } }
+
+@keyframes animation-shift-out-right {
+  from {
+    opacity: 1;
+    transform: translateX(0); }
+  to {
+    opacity: 0;
+    transform: translateX(0.6em); } }
+
+@keyframes animation-shift-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(-0.6em); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes animation-shift-out-down {
+  from {
+    opacity: 1;
+    transform: translateY(0); }
+  to {
+    opacity: 0;
+    transform: translateY(0.6em); } }
+
+.screen-1 {
+  transition: 0.4s opacity ease; }
+
+/*
+	Technique: 
+	- Define rest states in regular CSS
+	- Modify the appearance with animations applied via classes
+	- To change the appearance, remove the class applying the current fill-mode and apply a new animation via a new class
+
+*/
+/*	Initial state	*/
+.js-notloaded .intro,
+.loading .intro {
+  clip-path: inset(0 100% 0 0);
+  opacity: 0;
+  transform: translateY(-1em); }
+
+.js-notloaded .program-cover:before,
+.loading .program-cover:before {
+  transform: scale(1.2); }
+
+.js-notloaded .screen-1,
+.loading .screen-1 {
+  opacity: 0; }
+
+.js-notloaded .tagline,
+.loading .tagline {
+  opacity: 0;
+  transform: translateY(-0.6em); }
+
+.js-notloaded .word-1,
+.loading .word-1 {
+  transform: translateX(-0.6em);
+  opacity: 0; }
+
+.js-notloaded .word-2,
+.loading .word-2 {
+  transform: translateX(0.6em);
+  opacity: 0; }
+
+/*	Intro animation	*/
+.loaded .intro {
+  animation-name: wipe-in;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; }
+
+.loaded .program-cover:before {
+  animation-name: focus-in;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; }
+
+.loaded .screen-1 {
+  opacity: 1; }
+
+.loaded .tagline {
+  animation-name: animation-shift-in-up;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; }
+
+.loaded .word-1 {
+  animation-name: animation-shift-in-left;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; }
+
+.loaded .word-2 {
+  animation-name: animation-shift-in-right;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; }
+
+/*	Outro animation	*/
+.rotating-gradient {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  transition: 0.4s all ease;
+  background: linear-gradient(to right, #641a2b 0%, #f00 100%);
+  background-size: 100%;
+  opacity: 0; }
+
+.endpoint-spark {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(../../images/spark.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 0;
+  z-index: 100; }
+
+.intro {
+  z-index: 101; }
+
+.its-curtains {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.curtain-left,
+.curtain-right,
+.stage-open {
+  position: absolute;
+  top: 0;
+  bottom: 0; }
+
+.curtain-left,
+.curtain-right {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, black 40%, white 64%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background-size: 10%;
+  mix-blend-mode: overlay;
+  opacity: 0; }
+
+.curtain-left {
+  left: 0;
+  right: 50%; }
+
+.curtain-right {
+  right: 0;
+  left: 50%; }
+
+.stage-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  left: 50%;
+  right: 50%;
+  overflow: hidden; }
+  .stage-open .enter-text {
+    display: block;
+    width: 40em;
+    text-align: center; }
+
+.launch-animation {
+  /* everything else */ }
+  .launch-animation .its-curtains {
+    z-index: 200; }
+
+@keyframes stage-open {
+  0% {
+    left: 50%;
+    right: 50%;
+    opacity: 0; }
+  1% {
+    left: 0;
+    right: 0;
+    opacity: 0; }
+  100% {
+    left: 0;
+    right: 0;
+    opacity: 1; } }
+
+@keyframes fade-to-white {
+  from { }
+  to {
+    letter-spacing: -0.04em;
+    opacity: 1;
+    transform: translateX(0); } }
+  .launch-animation .stage-open {
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: 1.7s;
+    animation-name: stage-open; }
+
+@keyframes spark-zoom {
+  0% {
+    background-size: 0;
+    opacity: 1; }
+  100% {
+    background-size: 60%;
+    opacity: 0; } }
+
+@keyframes rotate-gradient {
+  0% {
+    opacity: 0;
+    background-size: 100%;
+    transform: rotate(0);
+    width: 100vw;
+    height: 200vh;
+    top: 0;
+    left: 0; }
+  50% {
+    opacity: 1;
+    background-size: 50%;
+    transform: rotate(0);
+    width: 300vw;
+    height: 300vh;
+    top: -100vh;
+    left: -100vw; }
+  60% {
+    opacity: 1;
+    background-size: 50%;
+    transform: rotate(0);
+    width: 300vw;
+    height: 300vh;
+    top: -100vh;
+    left: -100vw; }
+  100% {
+    opacity: 1;
+    background-size: 50%;
+    transform: rotate(180deg);
+    width: 300vw;
+    height: 300vh;
+    top: -100vh;
+    left: -100vw; } }
+  .launch-animation .rotating-gradient {
+    animation-name: rotate-gradient;
+    animation-duration: 1.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in; }
+  .launch-animation .endpoint-spark {
+    animation-name: spark-zoom;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s; }
+  .launch-animation .program-cover:before {
+    opacity: 1;
+    transform: scale(1);
+    animation-name: cover-zoom-out;
+    animation-duration: 2s;
+    animation-fill-mode: forwards; }
+  .launch-animation .intro, .launch-animation .tagline {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+    animation-name: animation-shift-out-down;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .launch-animation .word-1 {
+    animation-name: animation-shift-out-left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .launch-animation .word-2 {
+    animation-name: animation-shift-out-right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }

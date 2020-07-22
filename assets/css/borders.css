@@ -1,0 +1,67 @@
+.xbutton--frame {
+  background: #fff;
+  display: inline-block;
+  padding: 1em 1.4em;
+  border: 1px solid #f00;
+  position: relative;
+  z-index: 3; }
+  .xbutton--frame, .xbutton--frame:before, .xbutton--frame:after {
+    transition: 0.2s all ease; }
+  .xbutton--frame:before, .xbutton--frame:after {
+    z-index: 1;
+    position: absolute;
+    content: "";
+    border: 1px solid #f00; }
+  .xbutton--frame:before {
+    top: 100%;
+    left: calc(0.5em / 2);
+    height: 0.5em;
+    width: 100%;
+    transform: skew(45deg); }
+  .xbutton--frame:after {
+    top: 0.5em;
+    top: calc(0.5em / 2);
+    right: -1.15em;
+    right: calc((0.5em) * -1.3);
+    height: 100%;
+    width: 0.5em;
+    transform: skew(0, 45deg); }
+  .xbutton--frame:hover {
+    margin-top: 0.25em;
+    margin-left: 0.25em;
+    background: #fff;
+    display: inline-block;
+    padding: 1em 1.4em;
+    border: 1px solid #f00;
+    position: relative;
+    z-index: 3; }
+    .xbutton--frame:hover:before, .xbutton--frame:hover:after {
+      z-index: 1;
+      position: absolute;
+      content: "";
+      border: 1px solid #f00; }
+    .xbutton--frame:hover:before {
+      top: 100%;
+      left: calc(0.25em / 2);
+      height: 0.25em;
+      width: 100%;
+      transform: skew(45deg); }
+    .xbutton--frame:hover:after {
+      top: 0.095em;
+      right: calc((0.25em) * -1.5);
+      height: 100%;
+      width: 0.25em;
+      transform: skew(0, 45deg); }
+  .xbutton--frame:active {
+    margin-top: 0.5em;
+    margin-left: 0.5em; }
+    .xbutton--frame:active:before {
+      height: 0;
+      top: 100%;
+      left: 0;
+      opacity: 0; }
+    .xbutton--frame:active:after {
+      width: 0;
+      right: 0;
+      top: 0;
+      opacity: 0; }
