@@ -1,0 +1,163 @@
+@mixin failsafe($animation) {
+	@if $animation == 'fade-in' {
+		
+	}
+	@if $animation == 'shift-in' {
+		// set original placement to 0
+	}
+}
+
+@mixin small() {
+   @media screen and (min-width: $small) {
+      @content;
+   }
+}
+@mixin medium() {
+    @media screen and (min-width: $medium) {
+        @content;
+    }
+}
+@mixin large() {
+    @media screen and (min-width: $large) {
+        @content;
+    }
+}
+
+
+@mixin padding-based-maxwidth($width) {
+	$padding: calc((100vw - #{$width})/2);
+	padding-left: $padding;
+	padding-right: $padding;
+}
+
+@mixin links ($link, $visited, $hover, $active) {
+    & {
+        color: $link;
+
+        &:visited {
+            color: $visited;
+        }
+        &:hover,
+        &:visited:hover {
+            color: $hover;
+        }
+        &:active, &:focus {
+            color: $active;
+        }
+    }
+}
+@mixin breakout($but-only-after) {
+    @media screen and (min-width: $but-only-after) {
+		width: 100vw;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+		max-width: none;	
+	}
+}
+
+
+@mixin prop($property, $values...) {
+  $i: 0;
+  @each $value in $values {
+    @if $i == 0 {
+      #{$property}: $value;
+    }
+    @else {
+      @media screen and (min-width: get-map-value-by-index($breakpoints, $i)) {
+        #{$property}: $value;
+      }
+    }
+    $i: $i+1;
+  }
+}
+
+
+
+
+
+//	https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
+
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $weight: null, $style: null, $exts: otf eot woff2 woff ttf svg) {
+	$src: null;
+	$path: "../fonts/";
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + $name + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+
+@mixin padding-maxwidth($maxwidth:30em) {
+	$padding: calc((100vw - #{$maxwidth})/2);
+	padding-left: $padding;
+	padding-right: $padding;
+}
+
+@mixin breakout($but-only-after:$medium) {
+    @media screen and (min-width: $but-only-after) {
+		width: 100vw;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+		max-width: none;	
+	}
+}
+
+@mixin text-background($bg) {
+	background: $bg;
+	-webkit-background-clip: text;
+    color: transparent;
+}
+
+
+@mixin border-wireframe($color) {
+	border: 1px solid transparent;
+	border-image-slice: 78 145 140 72;
+	border-image-width: 10px 18px 20px 10px;
+	border-image-outset: 0px 0px 6px 0px;
+	border-image-outset: 0.2px 9px 10px 0.5px;
+	border-image-repeat:stretch stretch;
+	border-image-source:url(../images/border-box-#{$color}.png);
+}

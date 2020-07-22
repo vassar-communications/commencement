@@ -1,0 +1,28 @@
+$small: 30em;
+$medium: 50em;
+$large: 70em;
+
+$breakpoints: (
+	small: $small,
+	medium: $medium,
+	large: $large,
+);
+
+
+$light-gray: #d5d1cf;
+$cream: #fff8ef;
+$red: #ed1c24;
+$gold: #c6aa76;
+$gray: #746661;
+$light-burgundy: #951829;
+$dark-burgundy: #641A2B;
+$pink: rgb(242,212,215);
+$dark-gray-cool: #63666a;
+$dark-gray-warm: rgb(101,86,86);
+
+
+$grad-lightburg-red: linear-gradient(45deg, $light-burgundy 0%, $red 100%);
+$grad-darkburg-red: linear-gradient(45deg, $dark-burgundy 0%, $red 100%);
+
+$grad-lightburg-red-left: linear-gradient(135deg, $light-burgundy 0%, $red 100%);
+$grad-darkburg-red-left: linear-gradient(135deg, $dark-burgundy 0%, $red 100%);

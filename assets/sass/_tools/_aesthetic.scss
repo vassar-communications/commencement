@@ -1,0 +1,130 @@
+
+/*	AESTHETIC
+	=========
+
+	These mixins handle aesthetic effects.
+*/
+
+@mixin linkColors($link, $visited, $hover, $active) {
+	&:link {
+		color: $link;
+	}
+	&:visited {
+		color: $visited;
+	}
+	&:hover, &:visited:hover, &:focus {
+		color: $hover;
+	}
+	&:active, &:visited:active {
+		color: $active;
+	}
+}
+
+@mixin ac-hidden() {
+	/*
+		from https://webaim.org/techniques/css/invisiblecontent/
+		There's also an .ac-hidden class in _structures/helpers/visibility.scss. That uses this mixin, and can be @extended if need be. I'm also setting this up as a mixin so it can be included in media queries (@extend doesn't work in media queries).
+		
+	*/
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;	
+}
+
+@mixin textBackground($background, $fallback: #888) {
+	/*	This is useful for applying an image to text - having the text serve as a mask for the image.
+		Might need to tweak this a little for better control over the image.
+	*/
+	/* Divya Manian's solution: http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html */
+	color: $fallback;
+	-webkit-text-fill-color: transparent;
+	background: -webkit-linear-gradient(transparent, transparent), $background repeat;
+	background: -o-linear-gradient(transparent, transparent);
+	-webkit-background-clip: text;
+}
+
+@mixin hide-visually() {
+	/*	This hides text visually, without concealing it from screen readers.
+		https://webaim.org/techniques/css/invisiblecontent/#techniques	*/
+
+	border: 0;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+@function blockShadow($color, $size) {
+    $shadow: 1px 1px $color;
+
+    @for $i from 1 through $size {
+        $shadow: #{$shadow}, #{$i}px #{$i}px #{$color};
+    }
+    @return $shadow;
+}
+
+@mixin setBlockShadow($color, $size:100, $fallbackColor:#aaa) {
+	//	If we're using CSS variables, include a fallback.
+	//	Fallback doubles the generated code, so only generate it
+	//	in the event that a CSS custom property is specified.
+	@if isCustomProperty($color) {
+		text-shadow: blockShadow($fallbackColor, $size);
+    }
+	text-shadow: blockShadow($color, $size);
+}
+
+
+
+
+@mixin color-sequence($list, $property:'background') {
+	/*	This accepts a list of colors and, optionally, a CSS property. It then generates a set of nth-child selectors
+		that are sequentially set to each color in the list. I'm still working on this, because I'd like the first
+		item to start with the first color in the series, and I haven't worked that out yet.
+		
+		Usage:
+
+		article {
+		  @include color-sequence($colors-list);
+		}
+		
+	*/
+  $count: length($colors-list);
+  @each $current-color in $colors-list {
+    $i: index($colors-list, $current-color);
+    &:nth-child(#{$count}n-#{$i}) {
+        #{$property}: $current-color;      
+    }
+  }
+}
+
+@mixin has-background-image($image, $fallback: #aaa) {
+	//	from http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html
+	//	Thanks Divya!
+	color: $fallback;
+	-webkit-text-fill-color: transparent;
+	background: -webkit-linear-gradient(transparent, transparent), url($image) repeat;
+	background: -o-linear-gradient(transparent, transparent);
+	-webkit-background-clip: text;
+}
+
+
+
+
+
+
+
+
+
+
+
+

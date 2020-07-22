@@ -1,0 +1,130 @@
+.border-wireframe {
+	&-black {
+		@include border-wireframe(black);
+		&-before {
+			&:before {
+				@extend .border-wireframe-black;
+			}
+		}
+	}
+	&-white {
+		@include border-wireframe(white);
+	}
+}
+
+.theme-dark-burgundy {
+	
+}
+
+
+@mixin state-up($bg:#fff, $border-color:#f00) {
+    background: $bg;
+    display: inline-block;
+//    padding: 1em 1.4em;
+    border: 1px solid $border-color !important;
+    position: relative;
+    z-index: 3;
+
+    $height: 1em;
+    $height: 0.5em;
+
+    &,
+    &:before,
+    &:after {
+      transition: 0.2s all ease;
+    }
+    &:before,
+    &:after {
+      z-index: 1;
+      position: absolute;
+      content: "";
+      border: 1px solid $border-color;
+    }
+    &:before {
+      top: 100%;
+      left: calc(#{$height} / 2);
+      height: $height;
+      width: 100%;
+      transform: skew(45deg);
+    }
+    &:after {
+      top: 0.5em;
+      top: calc(#{$height} / 2);
+      right: -1.15em;
+      right: calc((#{$height}) * -1);
+      height: 100%;
+      width: $height;
+      transform: skew(0, 45deg);
+    }
+}
+@mixin state-hover($bg:#fff, $border-color:#f00) {
+    margin-top: 0.25em;
+    margin-left: 0.25em;
+    background: $bg;
+    display: inline-block;
+//    padding: 1em 1.4em;
+    border: 1px solid $border-color !important;
+    position: relative;
+    z-index: 3;
+
+    $height: 0.25em;
+
+    &:before,
+    &:after {
+      z-index: 1;
+      position: absolute;
+      content: "";
+      border: 1px solid $border-color;
+    }
+    &:before {
+      top: 100%;
+      left: calc(#{$height} / 2);
+      height: $height;
+      width: 100%;
+      transform: skew(45deg);
+    }
+    &:after {
+      top: 0.095em;
+      right: calc((#{$height}) * -1.5);
+      height: 100%;
+      width: $height;
+      transform: skew(0, 45deg);
+    }
+}
+@mixin state-down() {
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    
+    &:before {
+      height: 0;
+      top: 100%;
+      left: 0;
+      opacity: 0;
+    }
+    &:after {
+      width: 0;
+      right: 0;
+      top: 0;
+      opacity: 0;
+    }  
+}
+
+/*
+.square-frame:not(.section) {
+    @include state-up(transparent, #000);	
+}
+.section {
+	
+}
+
+.xbutton--frame {
+  @include state-up();
+  
+  &:hover {
+    @include state-hover();
+  }
+  &:active {
+    @include state-down();
+  }
+}
+*/

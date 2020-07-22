@@ -1,0 +1,10 @@
+.media--story-item {
+	.media__title {
+		@include font(sans-serif, regular-bold);
+	}
+	.media__content {
+		p {
+			@include font(sans-serif, regular-condensed);
+		}
+	}
+}

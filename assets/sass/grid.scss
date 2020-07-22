@@ -1,0 +1,44 @@
+.grid-2-cols {
+	display: grid;
+	grid-gap: 2.4em; 
+
+	@include break(medium) {
+		grid-template-columns: 1fr 1fr;
+
+		&.cols--60-40 {
+			grid-template-columns: 6fr 4fr;
+		}
+		&.cols--40-60 {
+			grid-template-columns: 4fr 6fr;
+		}
+	}
+	&.grid--main-content {
+		@include padding-maxwidth(50em);
+		@include breakout();		
+	}
+}
+.grid-3-cols {
+	display: grid;
+	grid-gap: 2.4em; 
+
+	@include break(medium) {
+
+		@include css((
+			grid-template-columns: (1fr, 1fr 1fr, 1fr 1fr 1fr),
+		));
+	}
+}
+.grid-4-cols {
+	display: grid;
+	grid-gap: 2.4em; 
+
+	@include break(medium) {
+
+		@include css((
+			grid-template-columns: (1fr, 1fr 1fr, 1fr 1fr 1fr 1fr),
+		));
+	}
+}
+.colgap-wide {
+	grid-column-gap: 3.4em;
+}

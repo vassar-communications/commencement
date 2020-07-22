@@ -1,0 +1,686 @@
+/*
+	TO REVERT TO THE OLD DESIGN, SET CLASS TO d-1
+*/
+
+$block-delay: 4s;
+
+$burgundy: #861F41;
+$gold: #c6aa76;
+
+
+/*	Homepage
+	======== */
+
+$condensed: acumin-pro-extra-condensed;
+
+
+$lucy-maynard-salmon: #ce4643;
+
+
+.home {
+	overflow: hidden;
+}
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: rgba(255,255,255,0.1);
+  position: fixed;
+  z-index: 2000;
+  top: 50%;
+  right: 100%;
+  width: 100%;
+  height: 1px;
+}
+
+.vassar__logo {
+	position: absolute;
+	top: 0;
+	z-index: 10000;
+	width: 7em;
+	top: 1em;
+	left: 1em;
+	mix-blend-mode: overlay;
+}
+
+
+
+@keyframes slidein {
+	0% {
+//		opacity: 0;
+		transform: scale(1);
+	}
+	5% {
+//		opacity: 1;
+		transform: scale(1.05);
+	}
+	100% {
+//		opacity: 1;
+		transform: scale(2);
+	}
+}
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes zoom-in {
+	0% {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+
+
+html {
+//	opacity: 0;
+//	transition: 1s all ease;
+	
+	body {
+/*		background: url(https://images.unsplash.com/photo-1558980664-769d59546b3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=4650&q=100); */
+	}
+}
+
+.screen {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
+}
+/*
+.screen-2 {
+	opacity: 0;
+}
+*/
+
+/*	Screen 1 */
+
+/*
+.screen-1 {
+	background: rgb(101,86,86);
+	color: #fff;
+	opacity: 0;
+	z-index: -1;
+}
+.screen-1-active {
+	.screen-1 {
+		opacity: 1;
+		z-index: 1;
+	}
+}
+*/
+
+.subtext {
+	@include font(sans-serif, small);
+	color: #000;
+    margin-top: 1em;
+    opacity: 0.7;
+}
+.btn-enter {
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+.is-loaded,
+.is-loading {
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    
+	    align-items: center;
+	    display: flex;
+	    height: 100%;
+	    justify-content: center;
+	    width: 100%;
+}
+.start-me-up {
+	font-family: $condensed;
+    font-size: 8em;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #222;
+    opacity: 0;
+    transition: 1s color ease;
+    margin: 0;
+
+/*    
+    &:hover {
+	    cursor: pointer;
+	    color: #fff;
+    }
+ */   
+    .loaded & {
+//	    animation-delay: 1s;
+		animation-name: zoom-in;
+		animation-fill-mode: forwards;
+		animation-duration: 1s;
+		animation-timing-function: ease-in;
+    }
+}
+
+/*
+.is-loading,
+.is-loaded {
+	position: relative;
+	z-index: 3000;
+}
+*/
+/*
+.is-loading {
+	opacity: 1;
+}
+.is-loaded {
+	opacity: 0;
+}
+
+.loaded {
+	.is-loading {
+		opacity: 0;
+	}
+	.is-loaded {
+		opacity: 1;
+	}
+	.screen-1 {
+
+	}
+}
+
+//	After everything's loaded, show a welcome-mat for the site 
+
+.is-loaded {
+	flex-direction: column;
+	background: $gold;
+	overflow: hidden;
+
+	&:before {
+		opacity: 0.4;
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		
+		background: url(../images/loadscreen.png);
+		background-size: cover;
+
+		animation-name: ken-burns;
+		animation-fill-mode: forwards;
+		animation-duration: 34s;
+		animation-timing-function: ease-out;		
+	}
+	
+	* {
+		z-index: 10;
+	}
+}
+*/
+
+/*	Screen 2 */
+
+.screen-2 {
+	opacity: 0;
+	z-index: -1;
+	transition: 1s all ease;
+}
+.screen-2-active {
+	background: $lucy-maynard-salmon;
+	
+	.screen-2 {
+		opacity: 1;
+		z-index: 1;
+	}
+}
+
+.background-drift {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $dark-gray-cool;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+//		background-image: url(../images/0191-19-10-ali-main-drone-vassar-vb-1981-gm.jpg);
+		background-size: cover;
+//		opacity: 0.5;
+	}
+}
+
+.slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+//	transition: all ease 1s;
+	z-index: -1;
+	opacity: 0;
+	background: $lucy-maynard-salmon;
+	
+	&:before {
+//		filter: grayscale(100%);
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+//		mix-blend-mode: multiply;
+	}
+	
+	&.slide-1 {
+		&:before { background-image: url(../images/110519_160over90_Vassar_2529-gm.jpg); }
+	}
+	&.slide-2 {
+		&:before { background-image: url(../images/0191-19-10-ali-main-drone-vassar-vb-2043-gm.jpg); }
+	}
+	&.slide-3 {
+		&:before { background-image: url(../images/110619_160over90_Vassar_7060-gm.jpg); }
+	}
+}
+
+.slide-cover {
+	background: $lucy-maynard-salmon;
+}
+
+body.meet .slide-1,
+body.explore .slide-2,
+body.live .slide-3,
+.slide-active {
+	opacity: 1;
+	z-index: 3;
+	animation-name: slidein;
+	animation-fill-mode: forwards;
+	animation-duration: 30s;
+	animation-timing-function: linear;
+	
+	&:before {
+		animation-name: fade-in;
+		animation-fill-mode: forwards;
+		animation-duration: 1s;
+		animation-timing-function: linear;
+	}
+}
+
+/*
+.screen-2-active {
+	.background-drift {
+		animation-name: slidein;
+		animation-fill-mode: forwards;
+		animation-duration: 60s;
+		animation-timing-function: linear;
+	}
+}
+*/
+
+@keyframes initial-block {
+	0% {
+		height: 100%;
+	}
+	99% {
+		height: 100%;
+	}
+	100% {
+		height: 0%;
+	}
+}
+
+// $block-delay: 5s;
+
+//.screen-2-active {
+	/*
+		When the user clicks to enter the site, the cursor is positioned right over one of the
+		main site links, which results in an immediate hover state. This generates a sound
+		effect and is confusing; the user won't typically see the intro.
+		
+		Initial-block positions an element to momentarily block the hover state.
+	*/
+	.initial-block {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 100;
+
+		animation-name: initial-block;
+		animation-fill-mode: forwards;
+		animation-duration: $block-delay;
+		animation-timing-function: ease-in-out;
+	}
+//}
+
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.background-drift {
+	.vimeo-wrapper {
+	    width: 100vw;
+	    object-fit: cover;
+	    height: 100vh;
+	}
+}
+
+.d-1 {
+	.main-nav {
+		li {
+			opacity: 0;
+			$defaults: (
+				offset: 2s,
+	/*			type: transition */
+			);
+			@include sequence($defaults);
+	
+			animation-name: fade-in;
+			animation-duration: 2s;
+			animation-fill-mode: forwards;
+			
+			margin: 0;
+			overflow: hidden;
+		}
+	}
+	.background-drift {
+		.vimeo-wrapper {
+		    filter: grayscale(1);
+		    opacity: 0.5;
+		}
+	}
+}
+
+.main-nav {
+
+
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin: 0;
+	min-height: 100vh;
+	padding: 0;
+	text-align: center;
+	position: relative;
+	z-index: 20;
+//	mix-blend-mode: overlay;
+    
+	li {
+		list-style: none;
+	}
+	b {
+		font-weight: normal;
+	}
+	a {
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke: 1px #fff;
+
+		display: flex;
+		font-family: $condensed;
+		font-size: 10vw;
+		
+		@include css((
+			font-size: (5em, 5em, 10vw),
+		));
+		
+		justify-content: center;
+		text-transform: uppercase;
+//		font-weight: 100;
+		text-decoration: none;
+//		transition: all ease 1s;
+
+		&:before {
+//			content: "";
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			z-index: -1;
+		}
+		b {
+			margin-right: 0;
+			transition: all ease-in-out 0.4s;
+		}		
+		span {
+			display: inline-block;
+			opacity: 0;
+//			clip-path: inset(0 0 0 100%);
+			width: 0;
+			overflow: hidden;
+			transition: all ease-in-out 0.4s;
+		}
+		
+		&:hover {
+			color: #fff;
+			-webkit-text-fill-color: #fff;
+
+			b {
+				margin-right: 0.2em;
+			}			
+			&:before {
+				width: 100%;
+			}
+			span {
+//				clip-path: inset(0 0 0 0%);
+				width: 100%;
+				opacity: 1;
+			}
+		}
+	}
+	p {
+	    max-width: 40em;
+	    left: 0;
+	    margin: 0;
+	    font-size: 0.8em;
+	    color: #fff;
+	}
+	a:hover span {
+	    max-width: fit-content;
+	    opacity: 1;
+	    width: 2em;
+	}
+}
+@keyframes anim-outro {
+	0% {
+		transform: translate(0);
+		opacity: 1;
+		filter: blur(0);
+	}
+	100% {
+		transform: translate(-10em);
+		opacity: 0;
+		filter: blur(20px);
+	}
+}
+
+
+@mixin outro-curtain($map:(item: 1)) {
+	
+	/*
+		The first element should have the gradients.
+		The second has the solid color it shows before the page changes.
+	
+	*/
+	
+	$defaults: (
+		offset: 1s,
+		duration: 3s,
+	);
+	
+	$offset: has-key($map, $defaults, offset);
+	$duration: has-key($map, $defaults, duration);
+
+	@keyframes anim-outro-curtain-1 {
+		0% {
+			width: 0;
+			right: 0;
+			left: 100%;
+		}
+		50% {
+			width: 100vw;
+			right: 0;
+			left: 0;
+		}
+		100% {
+			width: 0;
+			left: 0;
+			right: 100%;
+		}
+	}
+	@keyframes anim-outro-curtain-2 {
+		0% {
+			width: 0;
+			right: 0;
+			left: 100%;
+		}
+		100% {
+			width: 100vw;
+			right: 0;
+			left: 0;
+		}
+	}
+
+	.outro-curtain {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100vh;
+		width: 0;
+		z-index: 200;
+		
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 100vh;
+			width: 0;
+		}
+		&:before {
+			background: linear-gradient(to right,  rgba(125,185,232,0) 0%,rgba(255,0,0,1) 51%,rgba(255,255,255,1) 100%);
+			background: linear-gradient(to right, rgba(125,185,232,0) 0%,rgba(255,212,0,1) 25%,rgba(255,0,0,1) 51%,rgba(255,255,255,1) 100%);
+			background: linear-gradient(to right, rgba(125,185,232,0) 0%,rgba(255,212,0,1) 25%,rgba(255,3,0,1) 88%,rgba(255,0,0,1) 89%,rgba(255,255,255,1) 100%);
+			background: linear-gradient(to right, rgba(125,185,232,0) 0%,rgba(198,170,118,1) 25%,rgba(255,0,0,1) 63%,rgba(255,255,255,1) 100%);
+			
+		}
+		&:after {
+			background: #fff;
+		}
+	}
+	.launch-outro {
+		.outro-curtain {
+			width: 100vw;
+	
+			&:before,
+			&:after {
+				animation-fill-mode: forwards;
+				animation-timing-function: ease-in-out;
+			}
+			&:before {
+				animation-name: anim-outro-curtain-1;
+				animation-delay: $offset; // offset
+				animation-duration: $duration; // duration
+			}
+			&:after {
+				animation-name: anim-outro-curtain-2;
+				animation-delay: ($duration/2) + $offset; // 2.5s; // (duration/2) + offset
+				animation-duration: ($duration/2); // 1.5s; // (duration/2)
+			}
+		}
+	}	
+}
+
+$defaults: (
+	offset: 1.4s,
+	duration: 0.4s,
+);
+
+@include outro-curtain($defaults);
+
+.launch-outro {
+	.main-nav {
+		li {
+			$defaults: (
+				offset: 0,
+			);
+			
+			@include sequence($defaults);
+
+
+			opacity: 1;
+			animation-name: anim-outro;
+			animation-fill-mode: forwards;
+			animation-duration: 1s;
+			animation-timing-function: ease-in;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

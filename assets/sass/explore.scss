@@ -1,0 +1,307 @@
+h1 {
+	color: #fff;
+    font-family: freight-big-pro, serif;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: -0.08em;
+    /* word-spacing: 0.2em; */
+    margin: 0;
+
+	@include css((
+	    font-size: (3em, 5em, 10vw),
+	));
+
+//	text-shadow: 0 0.06em 0.06em rgba(0,0,0,0.4);
+
+
+	& > b {
+	    display: block;
+	    line-height: 0.625;
+	}
+}
+
+
+@keyframes shift-left {
+	from {
+		opacity: 0;
+		transform: translateX(-2em);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes shift-right {
+	from {
+		opacity: 0;
+		transform: translateX(2em);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes wipe-in {
+	from {
+		width: 0;
+//		clip-path: inset(0 0 0 100%);
+	}
+	to {
+		width: 100%;
+//		clip-path: inset(0 0 0 0);
+	}
+}
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes ken-burns {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.4);
+	}
+}
+
+
+
+
+@keyframes pop-in {
+	0% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.pop-in-later {
+    left: -0.56em;
+	position: absolute;
+	transform: scale(1.4);
+	opacity: 0;
+    position: absolute;
+    display: block;
+}
+.loaded {
+	.pop-in-later {
+		animation-name: pop-in;
+		animation-delay: 2s;
+		animation-fill-mode: forwards;
+		animation-duration: 2s;
+	}
+}
+
+
+html {
+	body {
+//		opacity: 0;
+	}
+}
+.animation-edge {
+	& > * {
+		opacity: 0;
+	}
+}
+.loaded {
+	body {
+		opacity: 1;
+	}
+
+	.animation-edge {
+		.anim-component-edge1 {
+			animation-name: shift-left;
+			animation-fill-mode: forwards;
+			animation-duration: 4s;
+		}
+		.anim-component-edge2 {
+			animation-name: shift-right;
+			animation-fill-mode: forwards;
+			animation-duration: 4s;
+		}
+	}
+	
+	.animation-edge {
+		& > * {
+			opacity: 1;
+		}
+		.anim-component-edge1,
+		.anim-component-edge2 {
+			transform: translateX(0);
+		}
+	}
+}
+
+.header-cover {
+    align-items: center;
+	background: $dark-burgundy;
+	display: flex;
+    justify-content: center;
+	min-height: 100vh;
+    opacity: 0;
+    overflow: hidden;
+    position: relative;
+    transition: 2s all ease;
+    transition-delay: 1s;    
+    
+    &:before {
+	    content: "";
+	    position: absolute;
+	    width: 100%;
+	    height: 100%;
+		background: url(../images/explore-cover.jpg);
+		top: 0;
+		left: 0;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		
+		@include break(medium) {
+			background-size: cover;
+			background-position: top;
+		}
+		
+    }
+    &:after {
+		background: url(../images/arrow.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+	    content: '';
+	    position: absolute;
+	    width: 2em;
+	    height: 2em;
+	    bottom: 2em;
+
+
+		animation-name: bounce;
+		animation-duration: 2s;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+		
+		opacity: 1;
+		transition: 0.4s opacity ease;		
+		
+		.scrolled & {
+			opacity: 0;
+		}
+	}
+}
+
+/*
+.loading {
+	position: relative;
+	
+	&:before {
+		animation-name: spin;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+
+		background: url(../images/loader.gif);
+		position: fixed;
+		width: 16em;
+		height: 16em;
+		content: "";
+		top: calc(50vh - 8em);
+		left: calc(50vw - 8em);
+		background-size: cover;
+	}
+}
+*/
+
+.loaded {
+	.header-cover {
+//		animation-name: fade-in;
+//		animation-fill-mode: forwards;
+//		animation-duration: 2s;
+
+		opacity: 1;
+		
+		&:before {
+			animation-name: ken-burns;
+			animation-fill-mode: forwards;
+			animation-duration: 4s;			
+		}
+	}
+}
+
+
+/*	IMAGE BACKGROUND
+	================ */
+	
+.section.image-background {
+	min-height: 100vh;
+	position: relative;
+	padding-right: 0;
+	
+	&:before {
+		position: absolute;
+		content: "";
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background: url("../images/1221_Vassar-College_exteriors-+-campus-life_Oct-2019_JA.jpg");
+		background-attachment: fixed;
+		background-size: cover;
+		z-index: -1;
+
+	    filter: blur(20px) contrast(10);
+	    opacity: 0;
+		transition: 2s all ease;
+	}
+	
+	.section__content {
+	    background: rgba(255,255,255,0.6);
+	    backdrop-filter: blur(20px) contrast(1);
+		float: right;
+		opacity: 0;
+	    padding: 2em;
+		transition: 1s all ease;
+		width: 40%;
+		transform: translateX(2em);
+	}
+	
+	&.animation {
+		&:before {
+			opacity: 1;
+			filter: none;
+		}
+	}
+	&.show-text {
+		.section__content {
+			opacity: 1;
+			transform: translateX(0);
+		}		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

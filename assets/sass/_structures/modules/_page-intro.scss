@@ -1,0 +1,4 @@
+.page-intro {
+	@include padding-maxwidth(20em);
+	@include breakout();	
+}

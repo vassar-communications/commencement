@@ -1,0 +1,168 @@
+
+/*	VIDEO TABS
+	========== */
+
+summary {
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.largetab {
+	border-bottom: 3px solid #eee;
+	padding: 1em 2em;
+	
+	.largetab__title {
+		text-align: center;
+		
+		&:before {
+			transition: 0.4s all ease;
+			content: ">";
+			margin-left: -0.5em;
+			position: absolute;
+		}
+	}
+	&[open] {
+		& > summary {
+			&:before {
+				transform: rotate(90deg);
+			}
+		}
+	}
+}
+
+.subtab {
+	border-top: 1px solid #223;
+	
+	summary {
+		padding: 0.4em;
+		position: relative;
+		text-align: center;
+		
+		&:before {
+			content: '\2715';
+			transition: 0.4s all ease;
+			position: absolute;
+			line-height: 0;
+			top: 50%;
+			transform: rotate(45deg);
+			font-size: 60%;
+			color: rgba(255,255,255,0.4);
+			margin-left: -10.5%;
+
+			@include break(medium) {
+				margin-left: -3.5%;
+			}
+		}
+	}
+	&[open] {
+		padding-bottom: 2em;
+
+		& > summary {
+			&:before {
+				color: #f00;
+				transform: rotate(0);
+				font-weight: bold;
+				font-size: 100%;
+				top: 55%;
+				margin-left: -11.5%;
+
+				@include break(medium) {
+					margin-left: -4.5%;
+				}
+			}
+		}
+	}
+}
+
+.largetab__title + .tab__contents {
+//	align-items: center;
+//	display: flex;
+//	flex-direction: column;
+    
+	details {
+		$defaults: (
+			gap: 0.2s,
+			offset: 0
+		);
+		@include sequence($defaults);
+	}
+}
+
+
+details {
+	&[open] {
+		.tab__contents {
+			details {
+				@include fade();
+			}
+		}
+	}
+}
+
+.video-grid {
+	.grid__tile {
+		$defaults: (
+			offset: 0
+		);
+		$defaults: (
+			gap: 0.1s,
+			offset: 0
+		);
+		@include sequence($defaults);
+		
+//		margin-bottom: 2em;
+		
+		@include break(medium) {
+			margin-bottom: 0;
+		}
+	}
+	&[open] {
+		.grid__tile {
+			@include fade();			
+		}
+	}
+}
+
+
+
+
+.tile__caption {
+	margin-top: 0.6em;
+}
+
+.tile__title {
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    z-index: 10;
+    padding: 0.2em 0.4em;
+    top: 0.1em;
+    left: 0.1em;
+    border-radius: 0.4em;
+}
+
+.video-tile {
+	display: block;
+	background: #fff;
+	
+	&, .shine, img {
+		border-radius: 0.4em;
+	}
+	img {
+	    transition: 1s all ease !important;
+	    mix-blend-mode: multiply;
+	}
+    .shine {
+	    mix-blend-mode: overlay;
+    }
+	&:hover {
+	    background: $gold;
+	    cursor: pointer;
+	
+		img {
+		    filter: grayscale(1) contrast(2);
+		    opacity: 0.6;
+		}
+	}
+}
+

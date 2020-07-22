@@ -1,0 +1,10 @@
+.vb-title {
+	@include font(serif, medium-bold);	
+}
+.vb-caption {
+	@include font(sans-serif, small);
+	
+	p {
+		font-size: 1em;
+	}
+}

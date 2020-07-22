@@ -1,0 +1,15 @@
+.has-grid {
+	max-width: 50em;
+}
+.width-wide {
+	@include padding-maxwidth(40em);
+	@include breakout();		
+}
+.width-xwide {
+	@include padding-maxwidth(50em);
+	@include breakout();		
+}
+.width-xxwide {
+	@include padding-maxwidth(60em);
+	@include breakout();		
+}

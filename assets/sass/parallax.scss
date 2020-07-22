@@ -1,0 +1,23 @@
+/*
+.page-content {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+  
+  position: relative;
+  
+  margin-top: -100vh;
+  padding-top: 100vh;  
+  
+}
+
+.use-parallax {
+	overflow: hidden;
+	
+	&:before, img {
+		transform: translateZ(-1px) scale(1.5);
+		height: 100vh !important;
+	}
+}
+*/

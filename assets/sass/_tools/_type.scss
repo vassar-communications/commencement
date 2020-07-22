@@ -1,0 +1,72 @@
+/*	TYPOGRAPHIC
+	===========
+*/
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $directory: null, $weight: null, $style: null, $exts: otf woff2 woff) {
+	$src: null;
+  $path: '';
+  
+	@if $directory {
+ 	$path: "../fonts/" + $directory + '/' + $name + "/";
+	}
+	@else {
+	$path: "../fonts/" + $name + "/";
+	}
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + $name + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+
+@mixin font($font, $style:regular) {
+	
+	//	Look up the specified font in the main font database
+	//	and get its map
+	
+	$fontmap: map-get($font-styles, $font);
+	font-family: map-get($fontmap, 'font-family');
+	$all-css: map-get($fontmap, $style);
+	
+	//  checking for "use" needs to happen down here.
+	//  iterate over all-css
+	//  if it hits "use"
+	
+  @each $key, $value in $all-css {
+    @if $key == 'use' {
+      //  the value references the other map we need
+    	$other-css: map-get($fontmap, $value);
+    	$all-css: map-merge($all-css, $other-css);
+    	//  merge it into the map of current CSS we already have
+//    	@include css($combined-css);
+    }
+    @else {
+//    	@include css($all-css);
+    }
+  }	
+	@include css($all-css);
+}
+

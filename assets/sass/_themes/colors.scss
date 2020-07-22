@@ -1,0 +1,64 @@
+body {
+	color: #444;
+}
+a {
+	@include linkColors($light-burgundy, $dark-burgundy, $red, $red);
+	transition: 0.4s all ease;
+}
+.section {
+	h2.grad-lightburg-red {
+		@include text-background($grad-lightburg-red);
+	}
+	h2.grad-darkburg-red {
+		@include text-background($grad-darkburg-red);
+	}
+	h2:not(.no-border) {
+		padding-bottom: 1em;
+		position: relative;
+		
+		&:before {
+			bottom: 0.6em;
+			border-top: 1px solid #f00;
+			content: "";
+			left: 30%;
+			position: absolute;
+			right: 30%;
+		}
+	}
+}
+
+.section--fancylayout {
+	.section__header {
+		&.has-border {
+			margin-bottom: 2em;
+			padding-bottom: 2em;
+			border-bottom: 1px solid #fff;
+		}
+	}
+}
+
+.section--bio-grid {
+	.media.person-bio {
+		border-bottom: 1px solid #fff;
+	}
+	
+	&.theme-pink {
+		.media__figure {
+			background: #000;
+//			@include border-wireframe(black);
+		}
+	}
+	&.theme-dark-burgundy {
+		.media__figure {
+			background: #fff;
+//			@include border-wireframe(white);
+		}
+	}
+}
+
+
+.person-bio img {
+    border: none !important;
+}
+
+

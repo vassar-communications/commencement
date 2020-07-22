@@ -1,0 +1,195 @@
+
+/*	Flickity
+	========
+
+	This is designed to be mostly markup-agnostic beyond the markup and standard classes generated
+	or applied by Flickity. However:
+	
+	 - images should be contained in a "figure" tag
+	 - captions should be contained in a "figcaption" tag.
+	
+	 Refer to the following structure. You don't need to apply classes of "gallery-container" or
+	 "gallery" - those are for clarity - or use a <ul>, although the main gallery container,
+	which in this case is <ul class="gallery">, will need a class so you can invoke Flickity on it. 
+		
+<figure class="gallery-container single-image">
+   <ul class="gallery">
+      <li class="gallery-item">
+         <figure>
+            <img src="image-1.jpg" />
+            <figcaption>Caption 1</figcaption>
+         </figure>
+      </li>
+      <li class="gallery-item">
+         <figure>
+            <img src="image-2.jpg" />
+            <figcaption>Caption 1</figcaption>
+         </figure>
+      </li>
+      <li class="gallery-item">
+         <figure>
+            <img src="image-3.jpg" />
+            <figcaption>Caption 1</figcaption>
+         </figure>
+      </li>
+   </ul>
+</figure>
+*/
+
+
+.flickity-enabled {
+	//	if Flickity is working, it applies this class to the main gallery container.
+	height: var(--gallery-height, 26em);
+	margin-bottom: 1.6em;
+
+	.blocks-gallery-item,
+	.blocks-gallery-item figure,
+	.blocks-gallery-item img {
+	    height: 100%;
+	}
+	figcaption.blocks-gallery-item__caption {
+	    bottom: 0;
+	    position: absolute;
+	}
+}
+
+/*	Image stream
+	============
+
+	In this configuration, images appear as a stream. The image currently being viewed
+	will be aligned to the left; the other images in the gallery will appear next to it,
+	probably cropped by the right edge of the window.
+*/
+
+.image-stream {
+
+	.blocks-gallery-item__caption {
+	    background: rgba(255,255,255,0.2);
+	    backdrop-filter: blur(20px);
+	    padding: 0.4em 1em;
+	}
+	.blocks-gallery-item {
+		padding: 1em;
+		padding-right: 0;
+	}
+	.carousel-cell {
+		padding: 1em;
+
+		@media (orientation: landscape) {
+			height: 100%;
+		}
+		@media (orientation: portrait) {
+			width: 100%;
+		}
+	}
+	.flickity-page-dots {
+		bottom: auto;
+		top: -0.4em;
+		
+		.dot {
+			background: #fff;
+		}
+	}
+	figure {
+		margin: 0;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+	img {
+		@media (orientation: landscape) {
+			width: unset;
+			height: 100%;
+		}
+		@media (orientation: portrait) {
+			height: unset;
+			width: 100%;
+		}
+	}
+
+	.flickity-enabled {
+		padding-left: 0;
+	}
+	.flickity-viewport {
+		height: 100% !important;
+		overflow: visible !important;
+	}
+	figcaption {
+//	    position: absolute;
+	    z-index: 100;
+	    color: #fff;
+//	    bottom: 0;
+	    
+	    @include font(sans-serif, xsmall);
+
+		padding: 0.4em 0.8em;
+		background: rgba(0,0,0,0.8);
+		max-width: 30em;
+	}
+}
+
+
+
+/*	Single image
+	============
+
+	In this configuration, each image appears by itself, centered in the middle
+	of the gallery. There will typically be black space on both sides. 
+*/
+
+.single-image {
+	background: #000;
+	padding-top: 2em;
+	
+	.flickity-slider {
+		& > * {
+			text-align: center;
+			
+			figcaption {
+				text-align: center;
+				width: 100%;
+			}
+			&, figure {
+				width: 100%;
+			}
+			img {
+				width: auto;
+			}
+		}
+	}
+	.flickity-page-dots {
+		background: #000;
+		margin: 0;
+		padding: 0;
+		left: 0;
+		top: 100%;
+		padding: 0;
+		height: 2em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		.dot {
+			opacity: 1;
+			
+			&.is-selected {
+				background: #fff;
+			}
+		}
+	}
+}
+
+
+
+/*	HACKS FOR THIS SITE */
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+.page-intro {
+	@include font(serif, large-regular);
+}
+.section-intro {
+	@include font(sans-serif, large);
+}
+p {
+	@include font(sans-serif, regular);
+}
+li, td {
+	@include font(sans-serif, regular-condensed);
+	margin-bottom: 0.4em;
+}
+.type-small {
+	@include font(sans-serif, small);
+}
+.type-small-condensed {
+	@include font(sans-serif, small-condensed);
+}
+.placeholder {
+	@include font(sans-serif, small);
+}
+.intro {
+	@include font(serif, medium);
+}
+h2 {
+	font-family: freight-big-pro, serif;
+	font-size: 3.4em;
+	text-align: center;
+	margin: 0;
+	line-height: 0.9;
+	padding-bottom: 0.4em;
+	
+	@include css((
+		font-size: (2.4em, 3em, 3.4em),
+	));
+}
+h3 {
+	@include font(sans-serif, medium-bold);
+	margin-bottom: 0.2em;
+}
+strong {
+	font-variation-settings: 'wght' 660;
+}

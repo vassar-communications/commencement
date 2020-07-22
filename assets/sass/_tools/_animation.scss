@@ -1,0 +1,143 @@
+/*	Animations
+	========== */
+
+
+@mixin anim-shift-in($translate) {
+	@keyframes shift-in {
+		0% {
+			opacity: 0%;
+			transform: unquote($translate);
+		}
+		100% {
+			opacity: 100%;
+			transform: translate(0);
+		}
+	}	
+}
+
+//	is it possibly rendering the animaton before anything else? so it never gets the updated settings?
+
+@mixin shift($map:(item: 1)) {
+	$defaults: (
+		direction: right,
+		distance: 1em,
+		fill-mode: forwards,
+		duration: 2s,
+		delay: 0,
+	);
+
+	$delay: has-key($map, $defaults, delay);
+	$direction: has-key($map, $defaults, direction);
+	$distance: has-key($map, $defaults, distance);
+	$fill-mode: has-key($map, $defaults, fill-mode);
+	$duration: has-key($map, $defaults, duration);
+
+	$translate: '';
+	$sign: '';
+
+	@if $direction == right or $direction == up {
+		$sign: '-';
+	}
+	@if $direction == right or $direction == left {
+		$translate: 'translateX(' + $sign + $distance + ')';
+	}
+	@else if $direction == up or $direction == down {
+		$translate: 'translateY(' + $sign + $distance + ')';
+	}
+
+	@include anim-shift-in($translate);
+
+	
+	& {
+		opacity: 0;
+		font-size: $direction;
+		transform: unquote($translate);
+			font-size: $duration;
+	}
+	&.animation {
+		animation-name: shift-in;
+		animation-duration: $duration;
+		animation-fill-mode: $fill-mode;
+		font-size: $direction;
+			font-size: $duration;
+	}
+}
+
+
+
+@mixin fade($map:(item: 1)) {
+	$defaults: (
+		fill-mode: forwards,
+		duration: 2s,
+		trigger-class: null,
+		delay: 0,
+	);
+
+	$delay: has-key($map, $defaults, delay);
+	$fill-mode: has-key($map, $defaults, fill-mode);
+	$duration: has-key($map, $defaults, duration);
+	$trigger-class: has-key($map, $defaults, trigger-class);
+
+	@keyframes fade-in {
+		0% {
+			opacity: 0%;
+		}
+		100% {
+			opacity: 100%;
+		}
+	}	
+	
+	& {
+		opacity: 0;
+	}
+	&#{$trigger-class} {
+		animation-delay: $delay;
+		animation-name: fade-in;
+		animation-duration: $duration;
+		animation-fill-mode: $fill-mode;
+	}
+}
+
+
+
+
+@mixin sequence($map:(item: 1)) {
+	//	deprecated
+	$defaults: (
+		gap: 0.4s,
+		offset: 0s,
+		max-items: 20,
+		type: animation,
+	);
+	
+	$gap: has-key($map, $defaults, gap);
+	$offset: has-key($map, $defaults, offset);
+	$max-items: has-key($map, $defaults, max-items);
+	$type: has-key($map, $defaults, type);
+
+	@for $i from 1 through $max-items {
+		&:nth-child(#{$i}) {
+			#{$type}-delay: $offset + ($gap * $i);
+		}
+	}
+}
+
+@mixin bp-sequence($map:(item: 1)) {
+	$defaults: (
+		gap: 0.4s,
+		offset: 0s,
+		max-items: 20,
+		type: animation,
+	);
+	
+	$gap: has-key($map, $defaults, gap);
+	$offset: has-key($map, $defaults, offset);
+	$max-items: has-key($map, $defaults, max-items);
+	$type: has-key($map, $defaults, type);
+
+	@for $i from 1 through $max-items {
+		&:nth-child(#{$i}) {
+			#{$type}-delay: $offset + ($gap * $i);
+		}
+	}
+}

@@ -1,0 +1,154 @@
+$nav-fade-in-delay: 10.2s;
+
+.video-notloaded {
+//	opacity: 0;
+}
+
+.home {
+	transition: 0.4s all ease;
+//	opacity: 0;
+
+	&.iframe-loaded {
+//		opacity: 1;
+	}
+
+	.play-that-funky-music {
+	    color: #fff;
+	    position: absolute;
+	    right: 6em;
+	    top: 3.1em;
+	    z-index: 1010;
+	    @include font(sans-serif, xsmall);
+
+		animation-name: pulsate;
+		animation-iteration-count: 8;
+		animation-fill-mode: forwards;
+		animation-duration: 1s;
+		animation-timing-function: linear;
+
+	}
+	&.sound-is-playing {
+		.play-that-funky-music {
+			opacity: 0;
+		}
+	}
+	.vimeo-wrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		overflow: hidden;
+		
+		iframe {
+			width: 100vw;
+			height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+			min-height: 100vh;
+			min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+@keyframes d2-color-shift {
+	0% {
+		background: #fff;
+	}
+	100% {
+		background: #d03334;
+	}
+}	
+@keyframes d2-opacity-shift {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.6;
+	}
+}	
+@keyframes d2-stretch-down {
+	0% {
+		height: 100%;
+		opacity: 1;
+	}
+	40% {
+		height: 60%;
+		opacity: 0;
+	}
+	100% {
+		height: 0;
+		opacity: 0;
+	}
+}	
+
+.d-2 {
+	.background-drift {
+		background: #fff;
+		animation-name: d2-color-shift;
+		animation-duration: 3s;
+		animation-fill-mode: forwards;
+		animation-delay: $nav-fade-in-delay;
+	}
+	.main-nav {
+		li {
+			opacity: 0;
+			$defaults: (
+				offset: $nav-fade-in-delay,
+	/*			type: transition */
+			);
+			@include sequence($defaults);
+	
+			animation-name: fade-in;
+			animation-duration: 2s;
+			animation-fill-mode: forwards;
+			
+			margin: 0;
+			overflow: hidden;
+		}
+	}
+	.vimeo-wrapper {
+		mix-blend-mode: multiply;
+
+		animation-name: d2-opacity-shift;
+		animation-duration: 3s;
+		animation-fill-mode: forwards;
+		animation-delay: $nav-fade-in-delay;
+
+	}
+	.welcome-new-students {
+		
+		p {
+			color: #fff;
+			font-family: acumin-pro-extra-condensed;
+		    font-size: 4em;
+		    text-transform: uppercase;
+		}
+
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 1000;
+
+		animation-name: d2-stretch-down;
+		animation-duration: 4s;
+		animation-fill-mode: forwards;
+		animation-delay: 9.6s;
+	}
+}
+
+
+
+
+
+
+
+

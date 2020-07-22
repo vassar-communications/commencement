@@ -1,0 +1,14 @@
+.media--story-item {
+	grid-row-gap: 0.2em !important;
+	margin-bottom: 1em;
+	max-width: 50em;
+	padding-bottom: 1em;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+
+	.media__header {
+		margin-bottom: 0;
+	}
+	.media__figure {
+		max-width: 18em;
+	}
+}

@@ -1,0 +1,16 @@
+.media--story-item {
+	overflow: visible;
+	
+	.media__figure {
+		border-radius: 0.4em;
+		border: 0.2em solid $gold;
+		box-shadow: 0 0.2em 0.2em rgba(0,0,0,0.2);
+		overflow: hidden;
+		transition: 0.4s transform ease;
+	}
+	&:hover {
+		.media__figure {		
+			transform: scale(1.08) rotate(-3deg);
+		}
+	}
+}

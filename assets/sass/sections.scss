@@ -1,0 +1,443 @@
+.row {
+	margin-bottom: 2em;
+}
+.header-cover__container {
+	h1 {
+		position: fixed;
+		will-change: transform;
+	}
+}
+.header-cover__container h1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.header-cover__container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    clip-path: inset(0 0 0 0);
+}
+
+
+
+/*	Layout
+	====== */
+
+.section {
+	// padding: 4em;
+	
+	@include css((
+		padding: (1em, 1em, 4em),
+	));
+	overflow-x: hidden;
+	
+	h3 {
+		margin-top: 1em;
+	}
+	&.section--padding-small {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	
+	&__inner {
+		max-width: 30em;
+		margin: 0 auto;
+	}
+}
+.content-fullwidth {
+	.section__content {
+		max-width: none;
+	}
+}
+
+.section--fancylayout {
+	.section__inner {
+	    max-width: none;
+	    position: relative;
+	    z-index: 10;
+	}
+	.section__header {
+	    margin-bottom: 4em;
+
+		@include break(medium) {
+		    display: flex;
+		}
+		
+		h2 {
+			padding-right: 1em;
+			text-align: left;
+			
+			@include break(medium) {
+				width: 40%;				
+			}
+			
+			&:before {
+				display: none;
+			}
+		}
+		.intro-container {
+			margin: 0;
+
+			@include break(medium) {
+				width: 60%;
+			}
+		}
+	}
+}
+
+
+.section--fit-screen {
+	min-height: 100vh;
+}
+
+.section--bg-image {
+	position: relative;
+	
+	.section__inner {
+		position: relative;
+		z-index: 10;
+	}
+ 	.bg-image-wrapper {
+	  	position: absolute;
+	  	top: 0;
+	  	left: 0;
+	  	width: 100%;
+	  	height: 100%;
+//		clip-path: inset(0 0 0 0);
+  	}
+	.bg-image {
+//	    position: fixed;
+		display: none;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    object-fit: cover;
+//	    transition: 1s all ease;
+//	    will-change: transform;
+	}
+	&.image-at-top {
+		.bg-image {
+			object-position: top;
+		}
+    }
+	&.image-at-bottom {
+		.bg-image {
+			object-position: bottom;
+		}
+    }
+}
+
+
+.section--quote {
+	background: $grad-darkburg-red;
+	position: relative;
+	border: 0.4em solid #fff;
+	
+	.section__inner {
+		p {
+			color: $cream;
+			@include font(serif, xlarge);
+			text-shadow: 0 0.25em 0.1em rgba(0,0,0,0.2);
+		}
+	}
+	
+	&:before {
+		content: '';
+		position: absolute;
+		top: 1em;
+		left: 1em;
+		bottom: 1em;
+		right: 1em;
+		border: 2px solid #fff;
+		border-image: $grad-lightburg-red-left;
+		border-image-slice: 1;
+	}
+}
+
+
+/*	
+	This has a large image background, visible as soon as it scrolls into view. When the content part scrolls into view, the background fades.
+*/
+
+
+.section--full-iframe {
+	position: relative;
+	padding: 4em;
+	
+	&.iframe-loading {
+
+/*		
+		&:before {
+			animation-name: spin;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+	
+			background: url(../images/loader.png);
+			position: fixed;
+			width: 16em;
+			height: 16em;
+			content: "";
+			top: calc(50vh - 8em);
+			left: calc(50vw - 8em);
+			background-size: cover;
+			z-index: 10;
+		}
+		&:after {
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: rgba(255,255,255,0.4);			
+		}
+*/
+	}
+	&.iframe-loaded {
+		iframe {
+			@include border-wireframe(black);
+		}
+	}
+	
+	min-height: 100vh;
+	
+	.begone {
+		display: none;
+	}
+
+	&.click-to-load {
+		position: relative;
+
+/*		
+		input {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			-webkit-appearance: none;
+		    z-index: 20;
+		    background: transparent;
+		}
+*/
+	}
+}
+.section--bg-map {
+	padding: 2em;
+	background: url(../images/map-cover.jpg);
+	background-size: cover;
+	margin-top: 1em;
+	
+	h2 {
+		margin-bottom: 0.4em;
+	}
+	
+	&.iframe-loaded {
+		background: $cream;
+		
+		.map-load-text-container {
+			display: none;
+		}
+	}
+	.map-load-text-container {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	}
+}
+
+.acad {
+	&:before {
+		background-image: url(/2024/assets/images/live-acad-110519_160over90_Vassar_0378.jpg);		
+	}
+}
+
+
+.section--cover-img {
+	min-height: 120vh;
+	position: relative;
+	padding-top: 2em;
+
+	&:before {
+		content: '';
+		background-size: cover;
+		background-attachment: fixed;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;		
+	}
+
+	@include break(medium) {
+		padding-top: 8em;
+	}
+	.section__inner {
+		@include break(medium) {
+			opacity: 0;
+			transform: scale(0.96);
+		    transition: 1s all ease;			
+		}
+	}
+/*	&:before {
+	    position: absolute;
+	    content: "";
+	    height: 100%;
+	    width: 100%;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+	    transition: 1s all ease;
+	} */
+ 	.bg-image-wrapper {
+	  	width: 100%;
+	  	height: 20em;
+	  	
+		@include break(medium) {
+		  	position: absolute;
+		  	top: 0;
+		  	left: 0;
+		  	width: 100%;
+		  	height: 100%;
+//			clip-path: inset(0 0 0 0);
+		    transition: 1s all ease;
+		}
+  	}
+	.bg-image {
+//	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    display: none;
+	    object-fit: cover;
+//	    filter: grayscale(1);
+//	    opacity: 0.2;
+
+//	    transition: 1s all ease;
+//	    will-change: transform;
+	}
+	&.image-at-top {
+		.bg-image {
+			object-position: top;
+		}
+    }
+
+	@include break(medium) {
+		&.top-hits-topOfWindow {
+//			&:before {
+			.bg-image {
+				filter: grayscale(1);
+				opacity: 0.1;
+			}
+	
+			.section__inner {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+	}
+}
+
+.img--students {
+	&:before {
+	    background-image: url(../images/1221_Vassar-College_exteriors-+-campus-life_Oct-2019_JA.jpg);
+	}	
+}
+.img--faculty {
+	&:before {
+	    background-image: url(../images/0020_15_03_KR_0028.jpg);
+	}	
+}
+.section--social {
+	padding-bottom: 1em;
+}
+
+
+
+/*	Type
+	==== */
+
+@mixin wipe-center($triggerClass: "animation", $triggerAppliedTo: ".section") {
+	& {
+		clip-path: inset(0 50% 0 50%);
+		transition: 3s all ease;
+		opacity: 0;
+	}
+	#{$triggerAppliedTo}.#{$triggerClass} & {
+		opacity: 1;
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+.section__intro {
+    max-width: 24em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/*	Themes
+	====== */
+
+.section--black {
+	background: #17161d;
+	color: #eee;
+	
+	.largetab {
+	    border-color: #223;
+	}
+}
+
+
+
+/*	Animation
+	========= */
+
+.fade-in-on-scroll {
+	&.animate-this {
+		opacity: 0;
+		transition: all ease 1s;
+	}
+	&.top-50pfrom-topOfWindow {
+		opacity: 1;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

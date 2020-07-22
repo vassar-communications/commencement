@@ -1,0 +1,10 @@
+.largetab {
+	& > summary {
+		@include font(serif, headline);
+	}
+}
+.subtab {
+	summary {
+		@include font(sans-serif, medium);		
+	}
+}

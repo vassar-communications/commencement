@@ -1,0 +1,30 @@
+.section--coaches {
+	td {
+		font-size: 1.2em;
+		margin-bottom: 0;
+		display: block;
+
+		@include break(medium) {
+			display: table-cell;
+			border-bottom: 1px solid #fff;			
+			padding: 0.4em 2em;
+			padding-left: 0;
+		}
+	}
+	tr {
+		display: block;
+		margin-bottom: 0.8em;
+
+		@include break(medium) {
+			display: table-row;
+			margin-bottom: 0;
+		}
+	}
+	a {
+		font-variation-settings: 'wght' 600;
+	}
+	.section__content {
+		margin: 0 auto;
+		width: fit-content;
+	}
+}

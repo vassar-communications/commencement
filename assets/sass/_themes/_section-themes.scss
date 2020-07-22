@@ -1,0 +1,256 @@
+html:not(.wtff) {
+	/* 
+		FF can't handle fixed-position backgrounds if a filter is applied.
+	*/
+	.section {
+		.bg-image-wrapper {
+			will-change: transform;
+		}
+		&.section--bg-image {
+//			@include break(medium) {
+				.bg-image-wrapper {
+					filter: grayscale(1) contrast(1.5);
+				}
+//			}
+		}
+		&.section--cover-img {
+			&.top-hits-topOfWindow {
+				@include break(medium) {
+					.bg-image-wrapper {
+						filter: grayscale(1) contrast(1.5);
+					}
+				}
+			}
+			&.theme-gold {
+				&.top-hits-topOfWindow {
+					@include break(medium) {
+						.bg-image-wrapper {
+							filter: grayscale(1) contrast(2.5);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.bg-image-wrapper {
+	background-size: cover;
+
+	@include break(medium) {
+		background-attachment: fixed;
+	}
+}
+
+@mixin pattern-layer($pattern, $size, $opacity) {
+	position: relative;
+	
+	.section__inner {
+		position: relative;
+		z-index: 10;
+	}
+	
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url(../images/#{$pattern});
+		background-attachment: fixed;
+		background-size: $size;
+		opacity: $opacity;
+		// will-change: transform;
+	}
+}
+
+// theme-pat-quad theme-gradient-burgundy-red
+
+.section {
+
+	&.section--bg-image {
+		.bg-image-wrapper {
+			opacity: 0;
+		}
+
+		@include break(medium) {
+			.bg-image-wrapper {
+				opacity: 0.15;
+			}
+		}
+	}		
+	&.section--cover-img {
+//			.bg-image-wrapper {
+			background: #ea1b1b;
+//			}
+		&.top-hits-topOfWindow {
+			@include break(medium) {
+				.bg-image-wrapper {
+					opacity: 0.1;
+				}
+			}
+		}
+	}
+
+	&.theme-red {
+		background: #ea1b1b;
+		color: #fff;
+
+		a {
+			@include linkColors(#fff, #fff, #000, #000);
+		}
+		&.section--cover-img {
+//			.bg-image-wrapper {
+				background: #ea1b1b;
+//			}
+			&.top-hits-topOfWindow {
+				@include break(medium) {
+					.bg-image-wrapper {
+						opacity: 0.2;
+					}
+				}
+			}
+		}
+	}
+	&.theme-gold {
+		background: $gold;
+		color: #222;
+
+		a {
+			@include linkColors(#000, #000, #fff, #fff);
+		}
+		&.section--cover-img {
+			&.top-hits-topOfWindow {
+				@include break(medium) {
+					.bg-image-wrapper {
+						opacity: 0.1;
+					}
+				}
+			}
+		}
+	}
+	&.theme-light-burgundy {
+		background: $light-burgundy;
+		color: $cream;
+		
+		a {
+			@include linkColors(#fff, #fff, $gold, $gold);
+		}
+		&.section--cover-img {
+			&.top-hits-topOfWindow {
+				@include break(medium) {
+					.bg-image-wrapper {
+						opacity: 0.2;
+					}
+				}
+			}
+		}
+	}
+	&.theme-dark-burgundy {
+		background: $dark-burgundy;
+
+		a {
+			@include linkColors($gold, $gold, #fff, #fff);
+		}
+	}
+	&.theme-pat-quad {
+		@include pattern-layer('pattern-quad-white.png', 2em, 0.06);
+	}
+	&.theme-light-gray {
+		background: $light-gray;
+		color: $cream;
+	}
+	&.theme-cool-gray {
+		background: $dark-gray-cool;
+		color: $cream;
+
+		a {
+			@include linkColors($red, $gold, #fff, #fff);
+		}
+	}
+	&.theme-charcoal {
+		background: #222;
+		color: $cream;
+
+		a {
+			@include linkColors($gold, $gold, #fff, #fff);
+		}
+		h2 {
+			color: $gold;
+		}
+		&-pat-quad {
+			@extend .theme-charcoal;
+			@include pattern-layer('pattern-quad-white.png', 2em, 0.06);
+		}
+	}
+	&.theme-warm-gray {
+		background: $dark-gray-warm;
+		color: $cream;
+	}
+	&.theme-cream {
+		background: $cream;
+		
+		h2, .intro {
+			color: #444;
+		}
+		&.section--bg-image {
+			
+			.bg-image-wrapper {
+				opacity: 0.15;
+			}
+		}		
+	}
+	&.theme-gradient-burgundy-red {
+		background: $grad-lightburg-red;
+	}
+}
+
+
+.theme-pink {
+	background: $pink;
+	
+	* {
+		border-color: rgba(255,255,255,0.4) !important;
+	}
+}
+.theme-dark-gray {
+	background: $dark-gray-cool;
+	color: #fff;
+
+	&.top-hits-topOfWindow {
+		&:before {
+
+		}
+	}
+
+	&.top-hits-topOfWindow:before {
+	    filter: blur(20px) grayscale(1) !important;
+	    opacity: 0.04;
+	}
+
+	* {
+		border-color: rgba(255,255,255,0.4) !important;
+	}
+}
+.theme-dark-burgundy {
+	background: #4c0616;
+	color: #fff;
+
+	&.top-hits-topOfWindow {
+		&:before {
+
+		}
+	}
+
+	&.top-hits-topOfWindow:before {
+	    filter: grayscale(1) !important;
+	    opacity: 0.06 !important;
+	}
+
+	* {
+		border-color: rgba(255,255,255,0.4) !important;
+	}
+}
+
+

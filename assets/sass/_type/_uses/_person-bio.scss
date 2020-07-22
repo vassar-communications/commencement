@@ -1,0 +1,16 @@
+.person-bio {
+	.media__title {
+		@include font(sans-serif, xsmall-bold);
+	}
+	.media__subtitle {
+		@include font(sans-serif, xxsmall-condensed);
+	}
+	img {
+		border: 0.4em solid #fff;
+	}
+	.media__content {
+		p {
+			@include font(sans-serif, xsmall);
+		}
+	}
+}

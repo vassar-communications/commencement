@@ -1,0 +1,72 @@
+@keyframes wipe-in {
+	from {
+		clip-path: inset(0 100% 0 0);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+@keyframes shift-in-from-right {
+	from {
+		opacity: 0;
+		transform: translateX(1em);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.animate-this {
+//	opacity: 0;
+}
+.loaded {
+	.section {
+		&.animate-this {
+//			opacity: 0;
+//			transition: 1s opacity ease;
+
+/*
+	animation-name: fade-in;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;	
+*/			
+			h2 {
+//				clip-path: inset(0 0 0 100%);
+			}
+			.section__content {
+				opacity: 0;
+			}
+		}
+		&.top-66pfrom-topOfWindow {
+			opacity: 1;
+			
+			h2 {
+/*				animation-name: wipe-in;
+				animation-fill-mode: forwards;
+				animation-duration: 1s; */
+			}
+			.section__content {
+				animation-delay: 0.4s;
+				animation-name: zoom-in;
+				animation-fill-mode: forwards;
+				animation-duration: 1s;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

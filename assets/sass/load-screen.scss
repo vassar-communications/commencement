@@ -1,0 +1,67 @@
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}	
+
+/*
+	To display a load screen for an element, apply a class of show-load-screen.
+	
+	Note: this requires both the :before and :after pseudos.
+*/
+
+/*
+.loading {
+	body {
+		opacity: 0;
+	}
+}
+.loaded {
+	body {
+		animation-name: fade-in;
+		animation-duration: 1s;
+		animation-timing-function: linear;
+		animation-fill-mode: forwards;
+	}
+}
+*/
+
+
+.show-load-screen,
+.loading {
+	position: relative;
+
+	&:before {
+		animation-name: spin;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+
+		background: url(../images/loader.png);
+		position: fixed;
+		width: 16em;
+		height: 16em;
+		content: "";
+		top: calc(50vh - 8em);
+		left: calc(50vw - 8em);
+		background-size: cover;
+		z-index: 1001;
+	}
+	&:after {
+		animation-name: fade-in;
+		animation-duration: 0.4s;
+
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: rgba(255,255,255,1);
+		/* backdrop-filter: blur(20px); */
+		z-index: 1000;
+	}
+}

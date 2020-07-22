@@ -1,0 +1,24 @@
+
+/*	Debug
+	=====
+
+	This is a collection of tools and mixins that will help with development. I'm keeping it separate from the main mixins file because this is stuff that shouldn't get mixed up in the final site. Ensuring that this doesn't go live should be as simple as commenting out the debug @import.
+*/
+
+@if (variable-exists('debug__show-breakpoints')) {
+	@if ($debug__show-breakpoints == true) {
+		body:after {
+			content: "Default";
+			left: 50%;
+			position: fixed;
+			top: 0;
+		}
+		@for $i from 1 through 300 {
+			@media screen and (min-width: #{$i}em) {
+				body:after {
+					content: '#{$i}em';
+				}
+			}
+		}
+	}
+}
