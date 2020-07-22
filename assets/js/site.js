@@ -11,19 +11,26 @@ $( document ).ready(function() {
     if (window.navigator.userAgent.indexOf("Edge") > -1) {
         $('html').addClass('is-edge');
     }
+	$('html').addClass('js').removeClass('no-js');
 
+//	alert('a');
+
+    if (window.navigator.userAgent.indexOf("CriOS") > -1) {
+        $('html').addClass('is-ios-chrome');
+    }
 	$('html').addClass('js').removeClass('no-js');
 
 
 	var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 					
 	if(iOS) { 
-		$('html').addClass('is-ios');
+		$('html').addClass('ios, is-ios');
 	}    
 
 	var is_safari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
 	if(is_safari) jQuery( 'html' ).addClass( 'is-safari' );
 
+	
 	/* 
     $('.main-carousel').flickity({
 	  // options
