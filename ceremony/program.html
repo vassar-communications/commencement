@@ -1,0 +1,132 @@
+<?php
+	//	This is the current path 
+	$path = getcwd();
+	
+	//	Check that path for "preflight2"
+	//	If it finds it, we are on preflight, so use a different path
+	if (strstr($path, 'preflight2') !== false) {
+		echo "<!-- we're on preflight -->";
+		$include_path = '/web/sites/preflight2/web/commencement/assets/includes/';
+	}
+	//	If not, assume we are on production
+	else
+		$include_path = '/web/sites/www/web/commencement/assets/includes/';	
+	
+	$page_title = "Order of Exercises";
+
+	include($include_path.'functions.php');	
+	include($include_path.'header.php');
+?>
+		  
+<div id="welcome" class="section animate-this order-of-exercises">
+    <div class="section__inner">
+        <div class="section__content">
+            <h1 class="grad-darkburg-red">Order of Exercises</h1>
+            <div class="grid-1-cols width-wide">
+                <div class="element">
+                                     
+                    <div class="event">
+                        <div class="event__content">
+                            <h2 class="event__title">Music Prelude</h2>
+                            <p class="event__desc">Music Performance, Hudson Brass Quintet, “My Spirit Be Joyful” by Johann Sebastian Bach; “Pomp and Circumstance” (Land of Hope and Glory) by Edward Elgar</p>
+                            <p><a class="link--video viewbox-link" data-title="Hudson Brass Quintet, “My Spirit Be Joyful” by Johann Sebastian Bach; “Pomp and Circumstance” (Land of Hope and Glory) by Edward Elgar" data-caption="" data-type="video" href="https://player.vimeo.com/video/422111404" tabindex="0">Watch the video</a></p>
+                        </div>
+                    </div>
+
+                    <div class="event">
+                        <div class="event__content">
+                            <h2 class="event__title">Music Performance</h2>
+                            <p class="event__desc">Night Owls, “Don’t Think Twice, It’s Alright” by Bob Dylan</p>
+                            <p class="event-video"><a class="link--video viewbox-link" data-title="Night Owls, “Don’t Think Twice, It’s Alright” by Bob Dylan" data-caption="" data-type="video" href="https://www.youtube.com/embed/TUa2zDgergo" tabindex="0">Watch the video</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="event">
+                        <div class="event__content">
+                            <h2 class="event__title">Remarks</h2>
+                            <div class="event-item"><p class="event__desc">Land Acknowledgment and Opening Words from Associate Dean of Religious and Spiritual Life and Contemplative Practices, Rev. Samuel Speers</p></div>
+                            
+                            <div class="event-item"><p class="event__desc">Welcome Remarks from the Vassar College President, Elizabeth H. Bradley</p>
+                            <p><a class="link--video viewbox-link" data-title="Welcome Remarks from the Vassar College President, Elizabeth H. Bradley" data-caption="" data-type="video" href="https://player.vimeo.com/video/420774529" tabindex="0">Watch the video</a></p>
+                            <p><a class="link--has-arrow" href="bradley-commencement-speech.html">Transcript</a></p></div>
+                                                        
+                            <div class="event-item"><p class="event__desc">Congratulatory Remarks, U.S. Senator Charles Schumer</p>
+                            <p><a class="link--video viewbox-link" data-title="Congratulatory Remarks, U.S. Senator Charles Schumer" data-caption="" data-type="video" href="https://player.vimeo.com/video/420802128" tabindex="0">Watch the video</a></p></div>
+                            
+                            <div class="event-item"><p class="event__desc">Congratulations Video, Vassar Community</p>
+                            <p><a class="link--video viewbox-link" data-title="Congratulations Video, Vassar Community" data-caption="" data-type="video" href="https://player.vimeo.com/video/421678189" tabindex="0">Watch the video</a></p></div>
+                            
+                            <div class="event-item"><p class="event__desc">Remarks from the Senior Class President, Heather Phan Nguyen</p>
+                            <p><a class="link--video viewbox-link" data-title="Remarks from the Senior Class President, Heather Phan Nguyen" data-caption="" data-type="video" href="https://player.vimeo.com/video/420810473" tabindex="0">Watch the video</a></p>
+                            <p><a class="link--has-arrow" href="nguyen-commencement-speech.html">Transcript</a></p></div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="event">
+                        <div class="event__content">
+                            <h2 class="event__title">Music Performance</h2>
+                            <p class="event__desc">Vassar College Choir & Friends, “Unclouded Day” by Rev. J.K. Alwood</p>
+                            <p><a class="link--video viewbox-link" data-title="Vassar College Choir & Friends, “Unclouded Day” by Rev. J.K. Alwood" data-caption="" data-type="video" href="https://player.vimeo.com/video/421594780" tabindex="0">Watch the video</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="event">
+                        <div class="event__content">
+                            <h2 class="event__title">Remarks</h2>
+                            <div class="event-item"><p class="event__desc">Remarks from the President of the Alumnae/i Association<br /> of Vassar College, Stephen Hankins ’85, P’13,’17</p>
+                            <p><a class="link--video viewbox-link" data-title="Remarks from the President of the Alumnae/i Association of Vassar College, Stephen Hankins ’85, P’13,’17" data-caption="" data-type="video" href="https://player.vimeo.com/video/420864129" tabindex="0">Watch the video</a></p>
+                            <p><a class="link--has-arrow" href="hankins-commencement-speech.html">Transcript</a></p></div>
+
+                            <div class="event-item"><p class="event__desc">Commencement Speaker Introduction, Elizabeth H. Bradley</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="event">
+                        <div class="event__content">
+                            <h2 class="event__title">Commencement Address</h2>
+                            <div class="event-item"><p class="event__desc">Jason Blum ’91</p>
+                            <p><a class="link--video viewbox-link" data-title="Jason Blum ’91" data-caption="" data-type="video" href="https://player.vimeo.com/video/420978656" tabindex="0">Watch the video</a></p>
+                            <p><a class="link--has-arrow" href="blum-commencement-speech.html">Transcript</a></p></div>
+                        </div>
+                    </div>
+
+                    <div class="event">
+                        <div class="event__content">
+                            <h2 class="event__title">Conferring of the Degrees</h2>
+                            <div class="event-item"><p class="event__desc">Elizabeth H. Bradley</p></div>
+                        </div>
+                    </div>
+
+                    <div class="event">
+                        <div class="event__content">
+                            <h2 class="event__title">Remarks</h2>
+                            <div class="event-item"><p class="event__desc">Remarks from the Dean of the College, Carlos Alamo-Pastrana</p></div>
+                        </div>
+                    </div>                    
+                    
+                    <div class="event">
+                        <div class="event__content">
+                            <h2 class="event__title">Charge to the Class Address</h2>
+                            <div class="event-item"><p class="event__desc">Elizabeth H. Bradley</p></div>
+
+                            <div class="event-item"><p class="event__desc">Cap Toss</p>
+                            <p><a class="link--video viewbox-link" data-title="Cap Toss" data-caption="" data-type="video" href="https://player.vimeo.com/video/421497682" tabindex="0">Watch the video</a></p></div>
+                        </div>
+                    </div>
+                    
+                </div>							
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- end page-content -->
+
+<?php echo join_the_convo(); ?>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
+
+	</body>
+</html>

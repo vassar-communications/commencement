@@ -1,0 +1,147 @@
+<?php
+	//	This is the current path 
+	$path = getcwd();
+	
+	//	Check that path for "preflight2"
+	//	If it finds it, we are on preflight, so use a different path
+	if (strstr($path, 'preflight2') !== false) {
+		echo "<!-- we're on preflight -->";
+		$include_path = '/web/sites/preflight2/web/commencement/assets/includes/';
+	}
+	//	If not, assume we are on production
+	else
+		$include_path = '/web/sites/www/web/commencement/assets/includes/';		
+		
+	$page_title = "Weekend";
+
+	include($include_path.'functions.php');	
+	include($include_path.'header.php');
+?>
+<div id="welcome" class="section animate-this weekend">
+  <div class="section__inner">
+    <div class="section__content">
+    <h1 class="grad-darkburg-red">Weekend</h1>
+      <div class="grid-1-cols width-wide">
+        <div class="element">
+            
+            <h3 class="schedule__date">Friday, May 22, 2020</h3>
+            
+                <div class="event">
+                    <p class="event__time">7:00pm–8:15pm<!-- <br />Eastern Time --></p>
+                    <div class="event__content">
+                        <h4 class="event__title">Asian Pacific Islander (API) Graduation Ceremony</h4>
+                        <!-- <img alt="" height="675" src="../assets/images/placeholder-16x9.gif" width="1200"> -->
+                        <img src="../assets/images/0071-19-05-ssh-api-ceremony-vassar-0120.jpg" width="1500" height="844" alt="Asian Pacific Islander (API) Graduation Ceremony"/>
+                        <p class="event__desc">Alumnae/i of Asian and Pacific descent (APAVC) and faculty will join seniors to offer congratulations and mark their transition to the world outside Vassar. This annual ceremony welcomes the seniors to the Vassar alumnae/i community. Red satin stoles are mailed to identifying seniors.</p>
+                        <p><a class="link--video viewbox-link" data-title="Asian Pacific Islander (API) Graduation Ceremony" data-caption="" data-type="video" href="https://player.vimeo.com/video/422004250" tabindex="0">Watch the video</a></p>
+                        <!-- <p><a class="link--has-arrow" href="https://vassar.zoom.us/webinar/register/WN_9OLzQ92qS0u4_pM1uO025w">Register for the ceremony on Zoom.</a></p> -->
+                        <p><a class="link--has-arrow" href="../assets/images/APAVC-Ceremony-Programme-2020-7.pdf">Asian Pacific Islander (API) Graduation Ceremony Program (PDF)</a></p>
+                    </div>
+                </div>
+          
+          <h3 class="schedule__date">Saturday, May 23, 2020</h3>
+
+                <div class="event">
+                    <p class="event__time">10:30am–12:00pm</p>
+                    <div class="event__content">
+                        <h4 class="event__title">Awarding of Prizes</h4>
+                        <!-- <img alt="" height="675" src="../assets/images/placeholder-16x9.gif" width="1200"> -->
+                        <img src="../assets/images/award-prizes-chapel-spring-15-TT_1226.jpg" width="1200" height="675" alt="Awarding of Prizes"/>
+                        <p class="event__desc">Presented by the Dean of the College and the Dean of Studies. The senior prize recipients will be awarded scholarship prizes and awards. Recipients will be notified in advance.</p>
+                        <p><a class="link--video viewbox-link" data-title="Awarding of Prizes" data-caption="" data-type="video" href="https://player.vimeo.com/video/422004868" tabindex="0">Watch the video</a></p>
+                        <p><a class="link--has-arrow" href="../assets/images/awarding-of-prizes-edited.pdf">Awarding of Prizes Ceremony Program (PDF)</a></p>
+                    </div>
+                </div>
+            
+                <div class="event">
+                    <p class="event__time">12:00pm–1:15pm</p>
+                    <div class="event__content">
+                        <h4 class="event__title">Latinx Student Union (LSU) Sarape Ceremony</h4>
+                        <!-- <img alt="" height="675" src="../assets/images/placeholder-16x9.gif" width="1200"> -->
+                        <img src="../assets/images/0071-19-05-ssh-lsu-ceremony-vassar-0027.jpg" width="1200" height="675" alt="Latinx Student Union (LSU) Sarape Ceremony"/>
+                        <p class="event__desc">Alumnae/i of Latinx descent and faculty will join identifying seniors for a celebration marking their transition to the world outside Vassar. This annual ceremony is organized and hosted with the Latinx Student Union and welcomes students to the Latinx alumnae/i community. Sarapes are mailed to identifying seniors.</p>
+                        <p><a class="link--video viewbox-link" data-title="Latinx Student Union (LSU) Sarape Ceremony" data-caption="" data-type="video" href="https://player.vimeo.com/video/422031487" tabindex="0">Watch the video</a></p>
+                        <p><a class="link--has-arrow" href="../assets/images/LatinxCeremonyBookletFINAL5-22-20.pdf">Latinx Student Union (LSU) Sarape Ceremony Program (PDF)</a></p>
+                        <!-- <p><a class="link--has-arrow" href="https://vassar.zoom.us/webinar/register/WN_lX1WVTrFQbyC9AWzWStsgA
+">Register for the ceremony on Zoom.</a></p> -->
+                    </div>
+                </div>
+            
+                <div class="event">
+                    <p class="event__time">1:45pm–3:00pm<!-- <br />Eastern Time --></p>
+                    <div class="event__content">
+                        <h4 class="event__title">AAAVC Kente Cloth Ceremony</h4>
+                        <!-- <img alt="" height="675" src="../assets/images/placeholder-16x9.gif" width="1200"> -->
+                        <img src="../assets/images/traditions-kente-0051_14_05_KF_0294.jpg" width="1200" height="665" alt="AAAVC Kente Cloth Ceremony"/><p class="event__desc">Members of the African American Alumnae/i (AAAVC) and faculty will celebrate Black seniors at the annual Kente Cloth ceremony and officially welcome them to the alumnae/i community. Kente cloths are mailed to identifying seniors.</p>
+                        <p><a class="link--video viewbox-link" data-title="AAAVC Kente Cloth Ceremony" data-caption="" data-type="video" href="https://player.vimeo.com/video/422050883" tabindex="0">Watch the video</a</p>
+                        <!-- <p><a class="link--has-arrow" href="https://vassar.zoom.us/webinar/register/WN_Q2HHqYpUTXq1P0hW3c6tzg
+">Register for the ceremony on Zoom.</a></p> -->
+                        <p><a class="link--has-arrow" href="../assets/images/FINAL-KenteClothCeremony2020Final5-22-20-part2.pdf">AAAVC Kente Cloth Ceremony Program (PDF)</a></p>
+                    </div>
+                </div>
+
+                <div class="event">
+                    <p class="event__time">4:00pm</p>
+                    <div class="event__content">
+                        <h4 class="event__title">Baccalaureate Service</h4>
+                        <!-- <img alt="" height="675" src="../assets/images/placeholder-16x9.gif" width="1200"> -->
+                        <img src="../assets/images/traditions-Baccalaureate-Service-1805-1.jpg" width="1200" height="675" alt="Baccalaureate Service"/>
+                        <!-- <p><div class="u-Video"><iframe allowfullscreen="" frameborder="0" height="540" id="ls_embed_1589809819" scrolling="no" src="https://livestream.com/accounts/4043074/events/9137353/player?width=960&amp;height=540&amp;enableInfoAndActivity=true&amp;defaultDrawer=feed&amp;autoPlay=true&amp;mute=false" width="100%"></iframe></div></p> --><p class="event__desc">The Baccalaureate Service, sponsored by the Council of ALANA Seniors and celebrating the 30th anniversary this year, is rooted in the traditions of the African diaspora, and celebrates faith in recognition of academic achievement. It takes a multicultural approach to acknowledge the diversity of the community at Vassar. Open to the entire community of graduates and families.</p>
+                        <p><a class="link--video viewbox-link" data-title="Baccalaureate Service" data-caption="" data-type="video" href="https://player.vimeo.com/video/421286864" tabindex="0">Watch the video</a></p>
+                        <p><a class="link--has-arrow" href="../assets/images/Baccalaureale-2020 VC-CAS.pdf">Baccalaureate Service Program (PDF)</a></p>
+                    </div>
+                </div>
+            
+            <h3 class="schedule__date">Sunday, May 24, 2020</h3>
+          
+                <div class="event virtual-receptions">
+                    <p class="event__time">12:00pm<!-- <br />Eastern Time --></p>
+                    <div class="event__content">
+                        <h4 class="event__title">Virtual Department Reception Contacts</h4>
+                        <p>Students and their families have been invited to receptions of their departments. Below is a list of reception organizers if you have questions or would like to be invited.</p>
+                        <ul class="virtual-department-receptions">
+                        <li>Anthropology Department, <a href="mailto:tecronk@vassar.edu">Terri Cronk</a></li>
+                        <li>Art Department, <a href="mailto:licollins@vassar.edu">Lisa Collins</a></li>
+                        <li>Biochemistry Program, <a href="mailto:jekennell@vassar.edu">Jennifer Kennell</a></li>
+                        <li>Biology Department, <a href="mailto:daesteban@vassar.edu">David Esteban</a></li>
+                        <li>Chinese and Japanese Department, <a href="mailto:hidollase@vassar.edu">Hiromi Tsuchiya Dollase</a></li>
+                        <li>Cognitive Science Department, <a href="mailto:jolong@vassar.edu">John Long</a></li>
+                        <li>Department of French &amp; Francophone Studies, <a href="mailto:thparker@vassar.edu">Thomas Parker</a></li>
+                        <li>Drama Department, <a href="mailto:rfritzgrabowska@vassar.edu">Rosemary Fritz-Grabowska</a></li>
+                        <li>Earth Science Department, <a href="mailto:schneiderman@vassar.edu">Jill Schneiderman</a></li>
+                        <li>Economics Department, <a href="mailto:paruud@vassar.edu">Paul Ruud</a></li>
+                        <li>Education Department, <a href="mailto:jmacknight@vassar.edu">Jennifer MacKnight</a></li>
+                        <li>English Department, <a href="mailto:wegraham@vassar.edu">Wendy Graham</a></li>
+                        <li>Department of Film, <a href="mailto:atreaster@vassar.edu">Amy Treaster</a></li>
+                        <li>German Studies Department, <a href="mailto:elschreiber@vassar.edu">Elliot Schreiber</a></li>
+                        <li>History Department, <a href="mailto:lymurdoch@vassar.edu">Lydia Murdoch</a></li>
+                        <li>Italian Department, <a href="mailto:eugiusti@vassar.edu">Eugenio Giusti</a></li>
+                        <li>Latin American &amp; Latino/a Studies Program, <a href="mailto:tavarez@vassar.edu">David Tavarez</a></li>
+                        <li>Mathematics &amp; Statistics Department, <a href="mailto:steinhorn@vassar.edu">Charles Steinhorn</a></li>
+                        <li>Multidisciplinary Programs, <a href="mailto:toarmborst@vassar.edu">Tobias Armborst</a></li>
+                        <li>Music Department, <a href="mailto:chhowlett@vassar.edu">Christine Howlett</a></li>
+                        <li>Neuroscience &amp; Behavior Program, <a href="mailto:keduncan@vassar.edu">Kelli Duncan</a></li>
+                        <li>Philosophy Department, <a href="mailto:jamkelly@vassar.edu">Jamie Kelly</a></li>
+                        <li>Physics &amp; Astronomy Department, <a href="mailto:elmegreen@vassar.edu">Debra Elmegreen</a></li>
+                        <li>Political Science Department, <a href="mailto:fusu@vassar.edu">Fubing Su</a></li>
+                        <li>Psychological Science Department, <a href="mailto:trumbetta@vassar.edu">Susan Trumbetta</a></li>
+                        <li>Sociology Department, <a href="mailto:lenevarez@vassar.edu">Leonard Nevarez</a></li>
+                        <li>Urban Studies Program, <a href="mailto:toarmborst@vassar.edu">Tobias Armborst</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+<!-- end page-content -->
+
+<?php echo join_the_convo(); ?>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
+
+	</body>
+</html>
