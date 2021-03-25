@@ -111,7 +111,8 @@ h3.u-ExtendedFooter__listHeader {
 	background-image:url(../images/header-bg.jpg);
     padding: 24% 8% 0 0;
 }
-.Row__title {
+.Row__title,
+.u-pageInner .speaker .Row__title {
     font-family: $serif;
     font-size: 2em !important;
     line-height: 1;
@@ -139,8 +140,7 @@ h3.u-ExtendedFooter__listHeader {
         }
     }
 }
-.u-lContent .speaker,
-.u-lContent .archived-ceremony {
+.u-lContent .speaker {
     margin-top: 0 !important;
     padding-top: 2em !important;
     .Row--col2 {
