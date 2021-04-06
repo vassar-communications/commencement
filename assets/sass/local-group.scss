@@ -75,7 +75,8 @@ main.u-lMain .u-lContent {
     @extend .title-gradient;
     text-decoration:none !important;
     text-transform: none !important;
-    text-align: left!important
+    text-align: left!important;
+    display: inline-block;
 }
 .Dark--scrim {
    .Row__title {
@@ -231,6 +232,17 @@ h3.u-ExtendedFooter__listHeader {
     }
     .Module--halfWidth {
         background-color: $burgundy-1;
+        transform: skewX(-4deg);
+        overflow: hidden;
+        img,
+        figcaption {
+            transform: skewX(4deg);
+        }
+        img {
+            max-width: 110%;
+            left: -18px;
+            position: relative;
+        }
     }
     .u-Figure__link,
     .u-Figure__link img{
@@ -251,14 +263,14 @@ h3.u-ExtendedFooter__listHeader {
         opacity: 0.4;
     }
 }
-.home-grid-bottom-row {
+/* .home-grid-bottom-row {
     .Module--halfWidth {
         background-color: $burgundy-1;
         &:last-child {
             background-color: #fff;
         }
     }
-}
+} */
 .event__title {
     margin-top: 2em;
 }
