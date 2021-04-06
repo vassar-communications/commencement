@@ -212,8 +212,14 @@ h3.u-ExtendedFooter__listHeader {
 }
 @media screen and (min-width: 43.75em) {
     .u-lContent .speaker {
+        .Row--col2 {
+            grid-template-areas:
+            "colHeader colHeader"
+            "fig-link fig-link"
+            "col1 col2";
+        }
         .Row {
-            max-width: none;
+            max-width: 48rem;
         }
         .u-Figure__link  {
             align-items: stretch;
