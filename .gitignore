@@ -48,6 +48,7 @@ min/
 *.sublime-project
 *.sublime-workspace
 design-files/
+images/
 node_modules/
 concatenated/
 prefixed/
