@@ -167,14 +167,14 @@ h3.u-ExtendedFooter__listHeader {
     .u-Figure__link:hover,
     .u-Figure__link:focus {
         .Module--halfWidth:last-child {
-            background-color: #fff;
-            color: #C6AA76;
+            background-color: $burgundy-1;
+            color: #fff;
         }
         img {
             opacity: 0.4;
         }
         .figure--image {
-            background-color: #C6AA76;
+            background-color: $burgundy-1;
         }
     }
     .figure--image {
