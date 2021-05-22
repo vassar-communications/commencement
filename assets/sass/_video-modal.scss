@@ -1,0 +1,239 @@
+/* featured video  */
+ul.videoList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+    row-gap: 1em;
+    list-style: none;
+    padding-left: 0;
+    a {
+       border: 1px solid $linkColor !important;
+        display: grid;
+        grid-template: 
+            "videoThumbnail"
+            "videoHeader"
+            /*"videoCaption"*/;
+        grid-template-rows: auto 1fr;
+        padding: 1em 5% !important;
+        text-decoration: none !important;
+        &:hover {
+            background-color: $gray-light;
+            border-color: $linkColorHoverFocus;
+            color: $linkColorHoverFocus;
+            transform: scale( 1.0125 );
+            transition: all .25s ease-out;
+            box-shadow: 0 0 0.5em 0.25em rgb(179, 179, 179);
+        }
+    }
+    figcaption {
+        strong {
+            color: $gray-dark;
+            font-size: 1.05em;
+        }
+        em {
+            color: $gray-dark;
+            font-size: .9em;
+            line-height: 0 !important;
+        }
+        strong~em::before {
+            content: "\A";
+            display: block;
+        }
+    }
+    figure {
+        margin-bottom: 0;        
+    }
+    h3 {
+        font: $fontWeightRegular 1em $sans-serif;
+        grid-area: videoHeader;
+        line-height: 1.1;
+        margin: 0;
+        text-transform: none;
+        letter-spacing: normal;
+    }
+    img {
+        grid-area: videoThumbnail;
+        width: 100%;
+        margin-bottom: .3em;        
+    }
+    li {
+        display: flex;
+    }
+    .imageOverlay {
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(../../assets/images/video-play-button-white.png);
+            background-size: cover;
+         }    
+    }
+}
+.u-folderClassroom-revisited ul.videoList .imageOverlay:after {
+        background-image: url();
+}
+.modal
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+
+.modal iframe
+{
+    border: 0;
+}
+
+.modal-backdrop
+{
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    opacity: .5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1040;
+}
+
+.modal-backdrop.fade
+{
+    opacity: 0;
+}
+
+.modal-backdrop.show
+{
+    opacity: .94;
+}
+
+.modal-body
+{
+    position: relative;
+}
+
+.modal-content
+{
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: #1A1A1A;
+    border-radius: .5em;
+    /* offset header height to vertically center modal */
+    margin-top: -3.5em;
+    padding: 0 1em 1em;    
+    position: relative;
+}
+
+.modal-dialog
+{
+    margin: 0 auto;
+    width: 90%;
+}
+
+.modal.fade
+{
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+
+/* override Admission styling */
+.modal.fade:after,
+.modal-backdrop.fade:after
+{
+    display: none;
+    visibility: hidden;
+}
+/* override Admission styling */
+
+.modal.fade.show
+{
+    opacity: 1;
+}
+
+.modal.fade .modal-dialog
+{
+    -webkit-transition: -webkit-transform .3s ease-out;
+    -o-transition: -o-transform .3s ease-out;
+    transition: transform .4s ease-out;
+    transform: translate(0,-100%);
+}
+
+.modal-header
+{
+    padding: 1em 0;
+    text-align: right;
+}
+
+.modal-header .close
+{
+    background-color: #111;
+    border: solid .125em #aaa;
+    color: #efefef;
+    cursor: pointer;
+}
+
+.modal-header .close:hover
+{
+    background-color: #fefefe;
+    color: #333;
+}
+
+.modal-open
+{
+    overflow: hidden;
+}
+
+.modal-open .modal
+{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* override JS display: block */
+.modal.show
+{
+    /* display: flex !important; */
+    align-items: center;
+}
+/* override JS display: block */
+
+.modal.show .modal-dialog
+{
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+}
+
+@media (min-width: 60em)
+{
+    .modal-dialog
+    {
+        margin: 1em auto;
+        width: 60%;
+    }
+}
+ul.videoList
+{
+    grid-template-columns: 1fr;
+}
+
+@media all and (min-width: 34.38em)
+{
+    ul.videoList
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+}
