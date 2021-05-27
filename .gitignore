@@ -60,3 +60,4 @@ config.codekit
 *.css
 *.codekit3
 *.css
+*.gdoc

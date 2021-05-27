@@ -11,9 +11,10 @@
 .u-lContent {
     background-image: url(../images/Vassar-SPARK-step_and_repeat_light-gold.png);
     background-repeat: repeat;
-    background-size: cover;
-    background-size: 100%
-    /* background-attachment: fixed; */
+    background-size: 90%;
+    background-attachment: fixed;
+    background-position-y: top;
+    background-position-x: 11em;
 }
 /* video header
 .u-pageHome .u-lHeader {
@@ -70,6 +71,9 @@ end video header */
     margin-bottom: 2em;
 }
 @media screen {
+    .u-Video {
+        margin-bottom: 1em;
+    }
     .Row--col3 {
         .giphy-sticker {
             border: 1px solid;
@@ -78,13 +82,15 @@ end video header */
         .giphy-sticker {
             display: block;
             transition: 0.4s all ease;
+            background-color: #fff;
             &:hover,
             &:focus,
             &:active {
                 transform: scale(1) perspective(0px) skewX(-3deg);
-                background-color: transparent;
+                background-color: #fff;
                 figcaption {
                     background-color: $gold;
+                    color: $gray-dark;
                 }
             }
             div.embed {
@@ -98,6 +104,7 @@ end video header */
                     background-color: transparent;
                     figcaption {
                         background-color: $gold;
+                        color: $gray-dark;
                     }
                 }                
             }
@@ -112,11 +119,13 @@ end video header */
                 color: #fff;
                 text-align: center;
                 padding: .5em;
+                font-size: .8em;
+                font-weight: $fontWeightBold;
             }
         }
     }
 }
-@media screen and (min-width: 56.25em) {
+@media screen and (min-width: $tiny) {
     .Row--col3 {
         align-items:stretch;
         display: grid;
@@ -175,7 +184,7 @@ end video header */
         padding: 0 0 2em;
     }
     .Row--col2 {
-        grid-template-columns: 20% 75%;
+        grid-template-columns: 25% 70%;
     }
 }
 @media screen and (min-width: 31.25em) {
@@ -480,19 +489,19 @@ h3.u-ExtendedFooter__listHeader {
         color: #fff;
         margin-bottom: 1em;
     }
-    @media screen and (min-width: 56.25em) {
+    /* @media screen and (min-width: 56.25em) { */
         .Row--col3 {
             align-items:stretch;
             display: grid;
             grid-column-gap: 5%;
             grid-row-gap: 0;
-            grid-template-areas: "header header" "col1 col2" "colFooter colFooter" ;
+            grid-template-areas: "colHeader colHeader" "col1 col2" "colFooter colFooter" ;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: auto;
             justify-items: stretch
         }
         .Row__title {
-            grid-area: header;
+            grid-area: colHeader;
         }
         .Row--col3 .Module--thirdWidth:first-child {
             grid-area: col1
@@ -503,7 +512,7 @@ h3.u-ExtendedFooter__listHeader {
         .Row--col3 .Module--thirdWidth:last-child {
             grid-area: colFooter
         }
-    }
+    /* } */
     .instagram-media {
         min-width: 100% !important;
     }
@@ -536,4 +545,13 @@ h3.u-ExtendedFooter__listHeader {
         visibility: hidden;
     }
 }
-
+.u-lMain a:link,
+.u-lMain a:visited {
+    border-bottom: 1px solid;
+    text-decoration-line: none;
+}
+.PageNav a.Module__link:link,
+.PageNav a.Module__link:visited {
+    border-bottom: none;
+    text-decoration-line: underline;    
+}
