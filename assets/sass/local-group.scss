@@ -1,6 +1,15 @@
 @import "_config";
 @import "_video-modal";
 
+.u-pageIndex-livestream {
+    h1.u-pageTitle {
+        display: none;
+    }
+    h2.u-pageTitle {
+        padding-top: 0;
+    }
+}
+
 /* video modal extra */
  ul.videoList h3 {
     strong {
@@ -270,14 +279,6 @@ main.u-lMain .u-lContent {
         max-width: none;
     }
 }
-.u-pageCeremony-mandarin {
-    figcaption {
-        visibility: hidden;
-    }
-    .u-pageTitle {
-        display: none;
-    }
-}
 .bgSparkPatternMaroonWhite {
     border: 1px solid $gray-light;
     background-image: url(../../assets/images/Vassar_SparkPattern_maroon-white.png);
@@ -488,31 +489,39 @@ h3.u-ExtendedFooter__listHeader {
     .Row__title {
         color: #fff;
         margin-bottom: 1em;
+        grid-area: colHeader;
+        font-size: 2.5em !important;
     }
-    /* @media screen and (min-width: 56.25em) { */
-        .Row--col3 {
-            align-items:stretch;
-            display: grid;
-            grid-column-gap: 5%;
-            grid-row-gap: 0;
-            grid-template-areas: "colHeader colHeader" "col1 col2" "colFooter colFooter" ;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto;
-            justify-items: stretch
+    .Row--col3 {
+        align-items:stretch;
+        display: grid;
+        grid-column-gap: 5%;
+        grid-row-gap: 0;
+        grid-template-areas: "colHeader colHeader" "col1 col2" "colFooter colFooter" ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        justify-items: stretch;
+        .Module--thirdWidth {
+            background-color: transparent;
+            &:hover,
+            &:focus {
+                background-color: transparent;
+                transform: none;
+            }
+            .figure--image {
+                border: none;
+            }
         }
-        .Row__title {
-            grid-area: colHeader;
-        }
-        .Row--col3 .Module--thirdWidth:first-child {
+        .Module--thirdWidth:first-child {
             grid-area: col1
         }
-        .Row--col3 .Module--thirdWidth:nth-child(1) {
+        .Module--thirdWidth:nth-child(1) {
             grid-area: col2
         }
-        .Row--col3 .Module--thirdWidth:last-child {
+        .Module--thirdWidth:last-child {
             grid-area: colFooter
         }
-    /* } */
+    }
     .instagram-media {
         min-width: 100% !important;
     }
@@ -539,6 +548,9 @@ h3.u-ExtendedFooter__listHeader {
         &:active {
             transform: scale(1.4) perspective(200px) rotateX(45deg);
             background-color: transparent;
+        }
+        &:link {
+            border-bottom: none !important;
         }
     }
     figcaption {

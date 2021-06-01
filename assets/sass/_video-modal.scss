@@ -100,7 +100,7 @@ ul.videoList {
     background-color: #000;
     bottom: 0;
     left: 0;
-    opacity: .5;
+    opacity: 1;
     position: fixed;
     top: 0;
     right: 0;
@@ -114,24 +114,41 @@ ul.videoList {
 
 .modal-backdrop.show
 {
-    opacity: .94;
+    opacity: 1;
 }
 
 .modal-body
 {
     position: relative;
+    z-index: 10;
+    padding: 0 1em;
 }
 
 .modal-content
 {
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    background-color: #1A1A1A;
+    background-color: #000;
     border-radius: .5em;
     /* offset header height to vertically center modal */
     margin-top: -3.5em;
     padding: 0 1em 1em;    
     position: relative;
+    &:after {
+        position: absolute;
+        content: '';
+        top: 1em;
+        left: 1em;
+        right: 1em;
+        bottom: 1em;
+        border: 1px solid transparent;
+        border-image-slice: 78 145 140 72;
+        border-image-width: 10px 18px 20px 10px;
+        border-image-outset: 0px 0px 6px 0px;
+        border-image-outset: 0.2px 9px 10px 0.5px;
+        border-image-repeat: stretch stretch;
+        border-image-source: url(../images/border-box-white.png);
+    }
 }
 
 .modal-dialog
@@ -170,24 +187,23 @@ ul.videoList {
     transform: translate(0,-100%);
 }
 
-.modal-header
-{
-    padding: 1em 0;
+.modal-header {
+    padding: 1em 0 0;
     text-align: right;
-}
-
-.modal-header .close
-{
-    background-color: #111;
-    border: solid .125em #aaa;
-    color: #efefef;
-    cursor: pointer;
-}
-
-.modal-header .close:hover
-{
-    background-color: #fefefe;
-    color: #333;
+    position: relative;
+    z-index: 10;
+    .close {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        font-size: 3em;
+        line-height: 1;
+        margin-right: .25em;
+        &:hover {
+            color: $gray-basic;
+        }
+    }
 }
 
 .modal-open
@@ -222,7 +238,7 @@ ul.videoList {
     .modal-dialog
     {
         margin: 1em auto;
-        width: 60%;
+        width: 75%;
     }
 }
 ul.videoList
@@ -235,5 +251,38 @@ ul.videoList
     ul.videoList
     {
         grid-template-columns: 1fr 1fr;
+    }
+}
+.no-thumb ul.videoList {
+    display: inherit;
+    li {
+        display: inline-block;
+    }
+    a.videoLink {
+        border: none !important;
+        display: inherit;
+        text-decoration: none !important;
+        position: relative;
+        padding: 0 !important;
+        margin-left: 2.25em;
+        font-weight: $fontWeightBold;
+        &:hover {
+            background-color: transparent;
+            border-color: $linkColorHoverFocus;
+            color: $burgundy-bright;
+            transform: none;
+            transition: all .25s ease-out;
+            box-shadow: none;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            background-image: url(../images/play-btn.png);
+            background-size: cover;
+            width: 2em;
+            height: 2em;
+            top: -0.3em;
+            left: -2.3em;
+        }
     }
 }
