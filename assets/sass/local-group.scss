@@ -492,69 +492,8 @@ h3.u-ExtendedFooter__listHeader {
         grid-area: colHeader;
         font-size: 2.5em !important;
     }
-    .Row--col3 {
-        align-items:stretch;
-        display: grid;
-        grid-column-gap: 5%;
-        grid-row-gap: 0;
-        grid-template-areas: "colHeader colHeader" "col1 col2" "colFooter colFooter" ;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        justify-items: stretch;
-        .Module--thirdWidth {
-            background-color: transparent;
-            &:hover,
-            &:focus {
-                background-color: transparent;
-                transform: none;
-            }
-            .figure--image {
-                border: none;
-            }
-        }
-        .Module--thirdWidth:first-child {
-            grid-area: col1
-        }
-        .Module--thirdWidth:nth-child(1) {
-            grid-area: col2
-        }
-        .Module--thirdWidth:last-child {
-            grid-area: colFooter
-        }
-    }
     .instagram-media {
         min-width: 100% !important;
-    }
-}
-.foursquare {
-    margin-top: 2em;
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-bottom: 3em;
-    grid-gap: 8%
-}
-@media screen and (min-width: 30em) {
-    .foursquare {
-        grid-gap:14%
-    }
-}
-.foursquare {
-    a {
-        display: block;
-        transition: 0.4s all ease;
-        &:hover,
-        &:focus,
-        &:active {
-            transform: scale(1.4) perspective(200px) rotateX(45deg);
-            background-color: transparent;
-        }
-        &:link {
-            border-bottom: none !important;
-        }
-    }
-    figcaption {
-        visibility: hidden;
     }
 }
 .u-lMain a:link,

@@ -253,8 +253,17 @@ ul.videoList
         grid-template-columns: 1fr 1fr;
     }
 }
+.no-thumb.sm-margin-bott ul.videoList {
+    margin-bottom: 0;
+}
+.link--has-arrow {
+    font-size: 70%;
+    text-transform: uppercase;
+    font-weight: $fontWeightRegular;
+}
 .no-thumb ul.videoList {
     display: inherit;
+    margin-bottom: 2em;
     li {
         display: inline-block;
     }
