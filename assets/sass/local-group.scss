@@ -481,8 +481,8 @@ h3.u-ExtendedFooter__listHeader {
 }
 .social-media {
     margin-top: 3em;
-    background-image: url(../../assets/images/pattern-quad-charcoal.png);
-    background-color: #000;
+    background-image: url(../../assets/images/pattern-quad-light-charcoal.png);
+    background-color: $burgundy-2;
     background-attachment: fixed;
     background-size: 2em;
     background-repeat: repeat;
@@ -494,6 +494,7 @@ h3.u-ExtendedFooter__listHeader {
     }
     .instagram-media {
         min-width: 100% !important;
+        height: 425px !important;
     }
 }
 .u-lMain a:link,
@@ -506,3 +507,58 @@ h3.u-ExtendedFooter__listHeader {
     border-bottom: none;
     text-decoration-line: underline;    
 }
+/* ceremony styles
+@media screen and (min-width: $tiny) {
+    .u-pageHome,
+    .u-pageIndex-livestream,
+    .u-pageCeremony-mandarin,
+    .u-pageCeremony-spanish {
+        .g-Masthead,
+        .NavGlobal {
+            display: none;
+        }
+    }
+    .u-NavSite__main {
+        padding-top: 1em;
+    }
+}
+.u-pageHome,
+.u-pageIndex-livestream,
+.u-pageCeremony-mandarin,
+.u-pageCeremony-spanish {
+    body {
+        grid-template-areas:
+            "kint-container"
+            "banner-covid19"
+            "global-masthead"
+            "global-navigation"
+            "header"
+            "main"
+            "site-navigation"
+            "footer";
+    }
+    .u-lHeader {
+        display: none;
+    }
+    .u-Masthead {
+        min-height: inherit;
+        max-width: 100%;
+        text-align: center;
+    }
+    .u-Masthead__siteName--link {
+        background-color: transparent;
+        padding: .75rem 3% 1.25rem;
+        margin-left: 0;
+    }
+    .u-lHeader:not(.u-lHeader--inner) a.u-Masthead__siteName--link:focus, 
+    .u-lHeader:not(.u-lHeader--inner) a.u-Masthead__siteName--link:hover {
+        color: $gold !important;
+        background-color: transparent;
+    }
+    .RowContainer.congrats,
+    .RowContainer:first-of-type {
+        padding-top: 1em;
+        text-align: center;
+    }
+}
+*/

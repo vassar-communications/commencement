@@ -77,3 +77,16 @@ $uniqueButtonLinkColorVisited: #fff;
 $uniqueButtonLinkColorActive: #ccc;
 $u-ArticleList__systemMessage--font: $fontWeightRegular 1.1em/1.2 $serif;
 $u-ArticleList__systemMessage--color: #400;
+
+@media screen {
+    .PageNavContainer {
+        position: relative;
+        z-index: 0;
+    }
+}
+@media screen and (min-width: $tiny) {
+    .PageNavContainer {
+        position: sticky;
+        z-index: 1;
+    }
+}
