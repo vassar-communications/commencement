@@ -25,26 +25,50 @@
     background-position-y: top;
     background-position-x: 11em;
 }
-/* video header
-.u-pageHome .u-lHeader {
-    background-image: url(../images/commencement-video-poster-image.jpg);
-    padding: 0;
+/* galleria header */
+.u-pageHome {
+    .u-lHeader {
+        background-image: url();
+        padding: 0;
+        position: relative;
+    }
+    .u-Masthead {
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+    }
+    .u-Masthead__siteName--link {
+        margin-left: 10%;
+    }
+    .galleria--content {
+        margin: 0;
+    }
 }
-.u-pageInner .u-lHeader {
-    background-image: url(../images/header-bg.jpg);
+.u-Masthead .u-Gallery__slideAttribution {
+    display: block;
+    font-size: 80%;
+}
+/* end galleria header */
+.u-folderWeekend .u-lHeader {
+    background-image: url(../images/slideshows/primary/2021/Commencement-2106-KR_5383.jpg);
     padding: 24% 8% 0 0;
 }
-.u-pageHome .u-Masthead {
-    max-width: none;
+.u-folderGuests .u-lHeader {
+    background-image: url(../images/slideshows/primary/2021/0121_Vassar-Graduation_June-6-21_JA.jpg);
+    padding: 24% 8% 0 0;
 }
-.u-pageHome .u-Masthead__siteName {
-    position: absolute;
+.u-folderGraduates .u-lHeader {
+    background-image: url(../images/slideshows/primary/2021/0001_Vassar-Graduation_June-6-21_JA.jpg);
+    padding: 24% 8% 0 0;
 }
-.u-pageInner .u-lHeader .u-Video {
-    display: none;
+.u-folderContact .u-lHeader {
+    background-image: url(../images/slideshows/primary/2021/0177_Vassar-Graduation_June-6-21_JA.jpg);
+    padding: 24% 8% 0 0;
 }
-end video header */
-
+.u-folderSwag .u-lHeader {
+    background-image: url(../images/slideshows/primary/2021/0117_Vassar-Graduation_June-6-21_JA.jpg);
+    padding: 24% 8% 0 0;
+}
 /* global */
 .PageNavContainer .Row {
     background: #fff;
@@ -243,8 +267,8 @@ main.u-lMain .u-lContent {
 .RowContainer.bg .Row__title {
     padding-top: 0;
 }
-.u-pageTitle,
-.speaker .Row__title {
+.u-pageTitle
+/* .speaker .Row__title */ {
     font-size: 2.5em !important;
     border: none;
     padding: .75em 0 .15em;
@@ -303,11 +327,6 @@ h3.u-ExtendedFooter__listHeader {
 }
 
 /* local */
-
-.u-lHeader{
-	background-image:url(../images/header-bg.jpg);
-    padding: 24% 8% 0 0;
-}
 .Row__title,
 .u-pageInner .speaker .Row__title {
     font-family: $serif;
@@ -359,6 +378,7 @@ h3.u-ExtendedFooter__listHeader {
     }
     .u-Figure__link:hover,
     .u-Figure__link:focus {
+        transform: scale(1) perspective(0px) skewX(-3deg);
         .Module--halfWidth:last-child {
             background-color: $burgundy-1;
             color: #fff;
@@ -519,7 +539,13 @@ h3.u-ExtendedFooter__listHeader {
 .hover a[href$=".pdf"]:after {
     content: none;
 }
-/* ceremony styles  */
+.replay-later figcaption {
+    @extend .ac-hiddenVisually;
+}
+.u-pageHome .RowContainer:first-of-type {
+    padding-top: 0 !important;
+}
+/* ceremony styles
 @media screen and (min-width: $tiny) {
     .u-pageHome,
     .u-pageIndex-livestream,
@@ -578,4 +604,4 @@ h3.u-ExtendedFooter__listHeader {
         padding-top: 1em;
         text-align: center;
     }
-}
+}  */
